@@ -23,7 +23,7 @@ public class EvaluationForm extends javax.swing.JFrame {
         initComponents();
           //setSize(600,750);
         
-          setResizable(false);
+         setResizable(false);
           
     }
       public void Create() throws IOException
@@ -53,6 +53,7 @@ public class EvaluationForm extends javax.swing.JFrame {
           String result15 = Result15.getText();
           String result16 = Result16.getText();
           String result17 = Result17.getText();
+          String Comment = CommentTxtArea.getText();
           try{
               File file = new File("Data.txt");
               FileWriter writer = new FileWriter(file,true);
@@ -91,6 +92,8 @@ public class EvaluationForm extends javax.swing.JFrame {
                   writer.write(result16);
                   writer.write(",");
                   writer.write(result17);
+                  writer.write(",");
+                  writer.write(Comment);
                   writer.write("\n");
                   writer.close();
               
@@ -199,7 +202,6 @@ public class EvaluationForm extends javax.swing.JFrame {
         five6 = new javax.swing.JRadioButton();
         ten6 = new javax.swing.JRadioButton();
         fifteen7 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
         Result0 = new javax.swing.JLabel();
         result1 = new javax.swing.JLabel();
         Result2 = new javax.swing.JLabel();
@@ -218,6 +220,11 @@ public class EvaluationForm extends javax.swing.JFrame {
         Result15 = new javax.swing.JLabel();
         Result16 = new javax.swing.JLabel();
         Result17 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        lblComment = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        CommentTxtArea = new javax.swing.JTextArea();
 
         jTextField3.setText("jTextField1");
 
@@ -234,6 +241,7 @@ public class EvaluationForm extends javax.swing.JFrame {
         jLabel45.setText("jLabel19");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel37.setForeground(new java.awt.Color(118, 11, 11));
         jLabel37.setText("Greeting");
@@ -410,6 +418,8 @@ public class EvaluationForm extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 14, 743, -1));
+
         jLabel17.setText("Offered to assist with anything else they might need");
 
         jLabel18.setText("Thanked the customer for calling ");
@@ -512,6 +522,8 @@ public class EvaluationForm extends javax.swing.JFrame {
                     .addComponent(fifteen17))
                 .addContainerGap())
         );
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 635, 743, -1));
 
         ten14.setText("10");
         ten14.addActionListener(new java.awt.event.ActionListener() {
@@ -727,6 +739,8 @@ public class EvaluationForm extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 445, -1, -1));
+
         fifteen8.setText("15");
         fifteen8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -866,6 +880,8 @@ public class EvaluationForm extends javax.swing.JFrame {
                         .addComponent(jLabel10)))
                 .addContainerGap())
         );
+
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 324, 743, -1));
 
         five7.setText("5");
         five7.addActionListener(new java.awt.event.ActionListener() {
@@ -1009,7 +1025,7 @@ public class EvaluationForm extends javax.swing.JFrame {
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(13, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1044,6 +1060,62 @@ public class EvaluationForm extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 172, 743, -1));
+
+        Result0.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(Result0, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 68, -1, -1));
+
+        result1.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(result1, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 289, -1, -1));
+
+        Result2.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(Result2, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 295, -1, -1));
+
+        Result3.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(Result3, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 301, -1, -1));
+
+        Result4.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(Result4, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 522, -1, -1));
+
+        Result5.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(Result5, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 528, -1, -1));
+
+        Result6.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(Result6, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 534, -1, -1));
+
+        Result7.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(Result7, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 540, -1, -1));
+
+        Result8.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(Result8, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 623, -1, -1));
+
+        Result9.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(Result9, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 629, -1, -1));
+
+        Result10.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(Result10, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 635, -1, -1));
+
+        Result11.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(Result11, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 713, -1, -1));
+
+        Result12.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(Result12, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 719, -1, -1));
+
+        Result13.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(Result13, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 725, -1, -1));
+
+        Result14.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(Result14, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 731, -1, -1));
+
+        Result15.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(Result15, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 737, -1, -1));
+
+        Result16.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(Result16, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 947, -1, -1));
+
+        Result17.setForeground(new java.awt.Color(238, 238, 238));
+        getContentPane().add(Result17, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 953, -1, -1));
+
         jButton1.setText("Results");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1051,146 +1123,38 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
-        Result0.setForeground(new java.awt.Color(238, 238, 238));
+        lblComment.setText("Comment");
 
-        result1.setForeground(new java.awt.Color(238, 238, 238));
+        CommentTxtArea.setColumns(20);
+        CommentTxtArea.setRows(5);
+        jScrollPane1.setViewportView(CommentTxtArea);
 
-        Result2.setForeground(new java.awt.Color(238, 238, 238));
-
-        Result3.setForeground(new java.awt.Color(238, 238, 238));
-
-        Result4.setForeground(new java.awt.Color(238, 238, 238));
-
-        Result5.setForeground(new java.awt.Color(238, 238, 238));
-
-        Result6.setForeground(new java.awt.Color(238, 238, 238));
-
-        Result7.setForeground(new java.awt.Color(238, 238, 238));
-
-        Result8.setForeground(new java.awt.Color(238, 238, 238));
-
-        Result9.setForeground(new java.awt.Color(238, 238, 238));
-
-        Result10.setForeground(new java.awt.Color(238, 238, 238));
-
-        Result11.setForeground(new java.awt.Color(238, 238, 238));
-
-        Result12.setForeground(new java.awt.Color(238, 238, 238));
-
-        Result13.setForeground(new java.awt.Color(238, 238, 238));
-
-        Result14.setForeground(new java.awt.Color(238, 238, 238));
-
-        Result15.setForeground(new java.awt.Color(238, 238, 238));
-
-        Result16.setForeground(new java.awt.Color(238, 238, 238));
-
-        Result17.setForeground(new java.awt.Color(238, 238, 238));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(16, 16, 16)))
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Result0)
-                                    .addComponent(result1)
-                                    .addComponent(Result2)
-                                    .addComponent(Result3)
-                                    .addComponent(Result4)
-                                    .addComponent(Result5)
-                                    .addComponent(Result6)
-                                    .addComponent(Result8)
-                                    .addComponent(Result9)
-                                    .addComponent(Result10)
-                                    .addComponent(Result11)
-                                    .addComponent(Result12)
-                                    .addComponent(Result13)
-                                    .addComponent(Result7, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addComponent(Result14, javax.swing.GroupLayout.Alignment.TRAILING))
-                            .addComponent(Result15, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addComponent(Result16, javax.swing.GroupLayout.Alignment.TRAILING))
-                    .addComponent(Result17, javax.swing.GroupLayout.Alignment.TRAILING))
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addComponent(lblComment)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1)
                 .addContainerGap())
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addComponent(Result0)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(result1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Result2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Result3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Result4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Result5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Result6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Result7)
-                        .addGap(26, 26, 26))
-                    .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(Result8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Result9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Result10)
-                        .addGap(78, 78, 78)
-                        .addComponent(Result11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Result12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Result13)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Result14)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Result15)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
-                        .addComponent(Result16)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Result17))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(9, 9, 9))
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton1)
+                        .addComponent(lblComment)))
+                .addGap(50, 50, 50))
         );
+
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 728, 743, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1331,7 +1295,6 @@ public class EvaluationForm extends javax.swing.JFrame {
             ten5.setSelected(false);
             fifteen5.setSelected(false);
             Result5.setText(five5.getText());
-            
         }
     }//GEN-LAST:event_five5ActionPerformed
 
@@ -1746,6 +1709,7 @@ public class EvaluationForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea CommentTxtArea;
     private javax.swing.JLabel Result0;
     private javax.swing.JLabel Result10;
     private javax.swing.JLabel Result11;
@@ -1834,7 +1798,10 @@ public class EvaluationForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JLabel lblComment;
     private javax.swing.JLabel result1;
     private javax.swing.JRadioButton ten;
     private javax.swing.JRadioButton ten1;

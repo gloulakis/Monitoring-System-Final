@@ -6,11 +6,16 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import static java.lang.System.load;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -29,9 +34,9 @@ public class MonitoringApp extends javax.swing.JFrame {
      */
     public MonitoringApp() {
         initComponents();
-       
         setResizable(false);
     }
+    
     public void infoMonitoringApp() throws FileNotFoundException{
       int inVal =0;
       try{
@@ -78,12 +83,17 @@ public class MonitoringApp extends javax.swing.JFrame {
       
   }
      
-    public void Create() throws IOException
-      {
+    public void Create() throws IOException {
         File file = new File("Data.txt");
         if (file.createNewFile()) {
             JOptionPane.showMessageDialog(null,"File"+ file.getName()+" was created.");
         }else JOptionPane.showMessageDialog(null,"The file"+ file.getName()+" already exists!");}
+   
+    public void FormWindowActivated(java.awt.event.WindowEvent evt){
+        ImageIcon icon = new ImageIcon("src/logo.png");
+        setIconImage(icon.getImage());
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -114,14 +124,14 @@ public class MonitoringApp extends javax.swing.JFrame {
         Comment = new javax.swing.JTextArea();
         jLabel41 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        btEf = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnNext = new javax.swing.JButton();
+        btnNew = new javax.swing.JButton();
+        btnEvaluationForm = new javax.swing.JButton();
+        btnCreateFile = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton3 = new javax.swing.JButton();
+        btnRefreshData = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -130,7 +140,13 @@ public class MonitoringApp extends javax.swing.JFrame {
 
         jLabel35.setText("Call Time");
 
+        CallDate.setText("00.00.0000");
+
+        CallTime.setText("00:00:00");
+
         jLabel36.setText("Call Duration");
+
+        CallDuration.setText("000");
 
         jLabel19.setText("Call Date");
 
@@ -282,31 +298,31 @@ public class MonitoringApp extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButton1.setText("Next Call ");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnNext.setText("Next ");
+        btnNext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnNextActionPerformed(evt);
             }
         });
 
-        jButton2.setText("New Agent");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnNew.setText("New");
+        btnNew.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnNewActionPerformed(evt);
             }
         });
 
-        btEf.setText("Evaluation Form");
-        btEf.addActionListener(new java.awt.event.ActionListener() {
+        btnEvaluationForm.setText("Evaluation Form");
+        btnEvaluationForm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btEfActionPerformed(evt);
+                btnEvaluationFormActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Create File");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnCreateFile.setText("Create File");
+        btnCreateFile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnCreateFileActionPerformed(evt);
             }
         });
 
@@ -314,36 +330,35 @@ public class MonitoringApp extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(51, 51, 51))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addComponent(btEf)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addComponent(jButton2)
-                .addContainerGap())
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(btnNext)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                                .addComponent(btnEvaluationForm)
+                                .addGap(12, 12, 12)))
+                        .addComponent(btnNew))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(btnCreateFile)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4)
+                .addComponent(btnCreateFile)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(btEf)
+                        .addComponent(btnEvaluationForm)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(btnNext))
+                    .addComponent(btnNew, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -351,14 +366,14 @@ public class MonitoringApp extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Project Name", "Username", "Call Time", "Call Date", "Call Duration", "Comment", "Gr", "Gr 2", "Gr 3", "Gr 4", "Ps", "Ps 2", "Ps 3", "Ps 4", "Rs 1", "Rs 2", "Rs 3", "Ce ", "Ce 2", "Ce 3", "Ce 4", "Ce 5", "Wu ", "Wu 2"
+                "Project Name", "Username", "Call Time", "Call Date", "Call Duration", "Comment", "Gr", "Gr 2", "Gr 3", "Gr 4", "Ps", "Ps 2", "Ps 3", "Ps 4", "Rs 1", "Rs 2", "Rs 3", "Ce ", "Ce 2", "Ce 3", "Ce 4", "Ce 5", "Wu ", "Wu 2", "Comment"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -371,10 +386,10 @@ public class MonitoringApp extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTable1);
 
-        jButton3.setText("Refresh Data");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnRefreshData.setText("Refresh Data");
+        btnRefreshData.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnRefreshDataActionPerformed(evt);
             }
         });
 
@@ -385,16 +400,17 @@ public class MonitoringApp extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jButton3)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(btnRefreshData)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addComponent(jButton3)
+                .addComponent(btnRefreshData)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -409,7 +425,7 @@ public class MonitoringApp extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 83, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -427,7 +443,7 @@ public class MonitoringApp extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btEfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEfActionPerformed
+    private void btnEvaluationFormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEvaluationFormActionPerformed
         try {
             infoMonitoringApp();
         } catch (FileNotFoundException ex) {
@@ -438,32 +454,29 @@ public class MonitoringApp extends javax.swing.JFrame {
                 &&CallTime.getText()!=null&&!CallTime.getText().isEmpty() &&ProjectName.getText()!=null&&!ProjectName.getText().isEmpty() &&UserName.getText()!=null&&!UserName.getText().isEmpty() ) {
             ef.setVisible(true);
         }else {JOptionPane.showMessageDialog(null,"Empty fields!");}
-    }//GEN-LAST:event_btEfActionPerformed
+    }//GEN-LAST:event_btnEvaluationFormActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
         // TODO add your handling code here:
         CallDate.setText("");
         CallDuration.setText("");
         CallTime.setText("");
         Comment.setText("");
        
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnNextActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
         // TODO add your handling code here:
         CallDate.setText("");
         CallDuration.setText("");
         CallTime.setText("");
         Comment.setText("");
-       
         ProjectName.setText("");
         UserName.setText("");
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnNewActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        File file = new File("Data.txt");
-        
-        
+    private void btnRefreshDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshDataActionPerformed
+        File file = new File("Data.txt");  
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
             DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
@@ -481,15 +494,15 @@ public class MonitoringApp extends javax.swing.JFrame {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(MonitoringApp.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnRefreshDataActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnCreateFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateFileActionPerformed
         try {
             Create();
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(Comment, "File Exist!");
         }
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnCreateFileActionPerformed
 
     /**
      * @param args the command line arguments
@@ -533,11 +546,11 @@ public class MonitoringApp extends javax.swing.JFrame {
     private javax.swing.JTextArea Comment;
     private javax.swing.JTextField ProjectName;
     private javax.swing.JTextField UserName;
-    private javax.swing.JButton btEf;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnCreateFile;
+    private javax.swing.JButton btnEvaluationForm;
+    private javax.swing.JButton btnNew;
+    private javax.swing.JButton btnNext;
+    private javax.swing.JButton btnRefreshData;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;

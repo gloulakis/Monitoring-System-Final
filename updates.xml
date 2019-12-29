@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<updateDescriptor baseUrl="">
+  <entry targetMediaFileId="156" updatableVersionMin="" updatableVersionMax="" fileName="MSE_windows-x64_1_0_0.exe" newVersion="1.0.0" newMediaFileId="156" fileSize="2994688" md5Sum="50bb697d715065fcf4d241034046890d" sha256Sum="6ba47aaef46a5c95c8692b0f5254b85e82a3748324547acc66c3232927c073f4" bundledJre="" archive="false" singleBundle="false">
+    <comment language="en" />
+  </entry>
+  <entry targetMediaFileId="160" updatableVersionMin="" updatableVersionMax="" fileName="MSE_macos_1_0_0.dmg" newVersion="1.0.0" newMediaFileId="160" fileSize="2777223" md5Sum="a91ff47e0b275768ffd4669669ab5d52" sha256Sum="96b6180d3aff9838de1d2d9c064343a67fba2a64cc704c87a4aff4a9bd6ea620" bundledJre="" archive="false" singleBundle="false">
+    <comment language="en" />
+  </entry>
+</updateDescriptor>
