@@ -26,8 +26,8 @@ public class EvaluationForm extends javax.swing.JFrame {
          setResizable(false);
           
     }
-      public void Create() throws IOException
-      {
+    
+      public void FileCreation() throws IOException{
         File file = new File("Data.txt");
         if (file.createNewFile()) {
             System.out.println("File"+ file.getName()+"was created.");
@@ -53,7 +53,7 @@ public class EvaluationForm extends javax.swing.JFrame {
           String result15 = Result15.getText();
           String result16 = Result16.getText();
           String result17 = Result17.getText();
-          String Comment = CommentTxtArea.getText();
+          String Comment = txtArComment.getText();
           try{
               File file = new File("Data.txt");
               FileWriter writer = new FileWriter(file,true);
@@ -221,10 +221,10 @@ public class EvaluationForm extends javax.swing.JFrame {
         Result16 = new javax.swing.JLabel();
         Result17 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnSaveResults = new javax.swing.JButton();
         lblComment = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        CommentTxtArea = new javax.swing.JTextArea();
+        txtArComment = new javax.swing.JTextArea();
 
         jTextField3.setText("jTextField1");
 
@@ -1116,18 +1116,18 @@ public class EvaluationForm extends javax.swing.JFrame {
         Result17.setForeground(new java.awt.Color(238, 238, 238));
         getContentPane().add(Result17, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 953, -1, -1));
 
-        jButton1.setText("Results");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnSaveResults.setText("Save");
+        btnSaveResults.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnSaveResultsActionPerformed(evt);
             }
         });
 
         lblComment.setText("Comment");
 
-        CommentTxtArea.setColumns(20);
-        CommentTxtArea.setRows(5);
-        jScrollPane1.setViewportView(CommentTxtArea);
+        txtArComment.setColumns(20);
+        txtArComment.setRows(5);
+        jScrollPane1.setViewportView(txtArComment);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -1138,7 +1138,7 @@ public class EvaluationForm extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(btnSaveResults)
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
@@ -1149,7 +1149,7 @@ public class EvaluationForm extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                     .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton1)
+                        .addComponent(btnSaveResults)
                         .addComponent(lblComment)))
                 .addGap(50, 50, 50))
         );
@@ -1663,7 +1663,7 @@ public class EvaluationForm extends javax.swing.JFrame {
       
     }//GEN-LAST:event_five16ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnSaveResultsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveResultsActionPerformed
             try{
                  infoEvaluation();
                  this.dispose();
@@ -1671,7 +1671,7 @@ public class EvaluationForm extends javax.swing.JFrame {
                JOptionPane.showMessageDialog(rootPane, "Error");
             }
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnSaveResultsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1705,11 +1705,11 @@ public class EvaluationForm extends javax.swing.JFrame {
             public void run() {
                 new EvaluationForm().setVisible(true);
             } 
+            
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea CommentTxtArea;
     private javax.swing.JLabel Result0;
     private javax.swing.JLabel Result10;
     private javax.swing.JLabel Result11;
@@ -1727,6 +1727,7 @@ public class EvaluationForm extends javax.swing.JFrame {
     private javax.swing.JLabel Result7;
     private javax.swing.JLabel Result8;
     private javax.swing.JLabel Result9;
+    private javax.swing.JButton btnSaveResults;
     private javax.swing.JRadioButton fifteen;
     private javax.swing.JRadioButton fifteen1;
     private javax.swing.JRadioButton fifteen10;
@@ -1763,7 +1764,6 @@ public class EvaluationForm extends javax.swing.JFrame {
     private javax.swing.JRadioButton five7;
     private javax.swing.JRadioButton five8;
     private javax.swing.JRadioButton five9;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1821,13 +1821,7 @@ public class EvaluationForm extends javax.swing.JFrame {
     private javax.swing.JRadioButton ten7;
     private javax.swing.JRadioButton ten8;
     private javax.swing.JRadioButton ten9;
+    private javax.swing.JTextArea txtArComment;
     // End of variables declaration//GEN-END:variables
-
-    private void infoMonitoringApp() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
    
-
-    
 }

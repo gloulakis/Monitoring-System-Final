@@ -1,5 +1,6 @@
 package App;
 
+import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -35,6 +36,7 @@ public class MonitoringApp extends javax.swing.JFrame {
     public MonitoringApp() {
         initComponents();
         setResizable(false);
+        tblInformation.getTableHeader().setBackground(Color.BLACK);
     }
     
     public void infoMonitoringApp() throws FileNotFoundException{
@@ -57,12 +59,12 @@ public class MonitoringApp extends javax.swing.JFrame {
       try {
           File file = new File("Data.txt");
           FileWriter writer = new FileWriter(file,true);
-               String projectname = ProjectName.getText();
-               String username = UserName.getText();
-               String callTime = CallTime.getText();
-               String callDate = CallDate.getText();
-               String callDuration = CallDuration.getText();
-               String comment = Comment.getText();
+               String projectname = fldProjectName.getText();
+               String username = fldUserName.getText();
+               String callTime = fldCallTime.getText();
+               String callDate = fldCallDate.getText();
+               String callDuration = fldCallDuration.getText();
+               String comment = fldComment.getText();
                writer.write(projectname);
                writer.write(",");
                writer.write(username);
@@ -107,21 +109,21 @@ public class MonitoringApp extends javax.swing.JFrame {
         jLabel37 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel35 = new javax.swing.JLabel();
-        CallDate = new javax.swing.JTextField();
-        CallTime = new javax.swing.JTextField();
+        fldCallDate = new javax.swing.JTextField();
+        fldCallTime = new javax.swing.JTextField();
         jLabel36 = new javax.swing.JLabel();
-        CallDuration = new javax.swing.JTextField();
+        fldCallDuration = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        ProjectName = new javax.swing.JTextField();
+        fldProjectName = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        UserName = new javax.swing.JTextField();
+        fldUserName = new javax.swing.JTextField();
         jLabel39 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        Comment = new javax.swing.JTextArea();
+        fldComment = new javax.swing.JTextArea();
         jLabel41 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         btnNext = new javax.swing.JButton();
@@ -130,7 +132,7 @@ public class MonitoringApp extends javax.swing.JFrame {
         btnCreateFile = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblInformation = new javax.swing.JTable();
         btnRefreshData = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -140,13 +142,13 @@ public class MonitoringApp extends javax.swing.JFrame {
 
         jLabel35.setText("Call Time");
 
-        CallDate.setText("00.00.0000");
+        fldCallDate.setText("00.00.0000");
 
-        CallTime.setText("00:00:00");
+        fldCallTime.setText("00:00:00");
 
         jLabel36.setText("Call Duration");
 
-        CallDuration.setText("000");
+        fldCallDuration.setText("000");
 
         jLabel19.setText("Call Date");
 
@@ -168,9 +170,9 @@ public class MonitoringApp extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(CallTime, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(CallDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(CallDuration, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(fldCallTime, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(fldCallDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fldCallDuration, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -178,15 +180,15 @@ public class MonitoringApp extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CallTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fldCallTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel35))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CallDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fldCallDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel19))
                 .addGap(6, 6, 6)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CallDuration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fldCallDuration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel36))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -208,13 +210,13 @@ public class MonitoringApp extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel20)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(UserName, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(fldUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel18)
                                 .addGap(37, 37, 37)
-                                .addComponent(ProjectName, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(fldProjectName, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel40))
                         .addGap(0, 1, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -225,13 +227,13 @@ public class MonitoringApp extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
-                    .addComponent(ProjectName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fldProjectName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel40)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
-                    .addComponent(UserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fldUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(11, Short.MAX_VALUE))
         );
 
@@ -271,9 +273,9 @@ public class MonitoringApp extends javax.swing.JFrame {
                 .addGap(186, 186, 186))
         );
 
-        Comment.setColumns(20);
-        Comment.setRows(5);
-        jScrollPane1.setViewportView(Comment);
+        fldComment.setColumns(20);
+        fldComment.setRows(5);
+        jScrollPane1.setViewportView(fldComment);
 
         jLabel41.setForeground(new java.awt.Color(118, 11, 11));
         jLabel41.setText("Comment");
@@ -361,7 +363,7 @@ public class MonitoringApp extends javax.swing.JFrame {
                     .addComponent(btnNew, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblInformation.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -384,7 +386,7 @@ public class MonitoringApp extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(jTable1);
+        jScrollPane2.setViewportView(tblInformation);
 
         btnRefreshData.setText("Refresh Data");
         btnRefreshData.addActionListener(new java.awt.event.ActionListener() {
@@ -400,12 +402,11 @@ public class MonitoringApp extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
-                        .addContainerGap())
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(btnRefreshData)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -450,36 +451,36 @@ public class MonitoringApp extends javax.swing.JFrame {
             Logger.getLogger(MonitoringApp.class.getName()).log(Level.SEVERE, null, ex);
         }
         EvaluationForm ef = new EvaluationForm();
-        if (CallDate.getText()!=null && !CallDate.getText().isEmpty()  &&CallDuration.getText()!= null &&!CallDuration.getText().isEmpty()
-                &&CallTime.getText()!=null&&!CallTime.getText().isEmpty() &&ProjectName.getText()!=null&&!ProjectName.getText().isEmpty() &&UserName.getText()!=null&&!UserName.getText().isEmpty() ) {
+        if (fldCallDate.getText()!=null && !fldCallDate.getText().isEmpty()  &&fldCallDuration.getText()!= null &&!fldCallDuration.getText().isEmpty()
+                &&fldCallTime.getText()!=null&&!fldCallTime.getText().isEmpty() &&fldProjectName.getText()!=null&&!fldProjectName.getText().isEmpty() &&fldUserName.getText()!=null&&!fldUserName.getText().isEmpty() ) {
             ef.setVisible(true);
         }else {JOptionPane.showMessageDialog(null,"Empty fields!");}
     }//GEN-LAST:event_btnEvaluationFormActionPerformed
 
     private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
         // TODO add your handling code here:
-        CallDate.setText("");
-        CallDuration.setText("");
-        CallTime.setText("");
-        Comment.setText("");
+        fldCallDate.setText("");
+        fldCallDuration.setText("");
+        fldCallTime.setText("");
+        fldComment.setText("");
        
     }//GEN-LAST:event_btnNextActionPerformed
 
     private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
         // TODO add your handling code here:
-        CallDate.setText("");
-        CallDuration.setText("");
-        CallTime.setText("");
-        Comment.setText("");
-        ProjectName.setText("");
-        UserName.setText("");
+        fldCallDate.setText("");
+        fldCallDuration.setText("");
+        fldCallTime.setText("");
+        fldComment.setText("");
+        fldProjectName.setText("");
+        fldUserName.setText("");
     }//GEN-LAST:event_btnNewActionPerformed
 
     private void btnRefreshDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshDataActionPerformed
         File file = new File("Data.txt");  
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
-            DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
+            DefaultTableModel model = (DefaultTableModel)tblInformation.getModel();
         
              for( int i = model.getRowCount() - 1; i >= 0; i-- ) {
              model.removeRow(i); }
@@ -500,7 +501,7 @@ public class MonitoringApp extends javax.swing.JFrame {
         try {
             Create();
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(Comment, "File Exist!");
+            JOptionPane.showMessageDialog(fldComment, "File Exist!");
         }
     }//GEN-LAST:event_btnCreateFileActionPerformed
 
@@ -540,17 +541,17 @@ public class MonitoringApp extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField CallDate;
-    private javax.swing.JTextField CallDuration;
-    private javax.swing.JTextField CallTime;
-    private javax.swing.JTextArea Comment;
-    private javax.swing.JTextField ProjectName;
-    private javax.swing.JTextField UserName;
     private javax.swing.JButton btnCreateFile;
     private javax.swing.JButton btnEvaluationForm;
     private javax.swing.JButton btnNew;
     private javax.swing.JButton btnNext;
     private javax.swing.JButton btnRefreshData;
+    private javax.swing.JTextField fldCallDate;
+    private javax.swing.JTextField fldCallDuration;
+    private javax.swing.JTextField fldCallTime;
+    private javax.swing.JTextArea fldComment;
+    private javax.swing.JTextField fldProjectName;
+    private javax.swing.JTextField fldUserName;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
@@ -568,6 +569,6 @@ public class MonitoringApp extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tblInformation;
     // End of variables declaration//GEN-END:variables
 }

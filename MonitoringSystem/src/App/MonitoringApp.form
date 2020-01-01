@@ -125,10 +125,10 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                              <Component id="CallTime" min="-2" pref="161" max="-2" attributes="0"/>
-                              <Component id="CallDate" alignment="1" min="-2" pref="161" max="-2" attributes="0"/>
+                              <Component id="fldCallTime" min="-2" pref="161" max="-2" attributes="0"/>
+                              <Component id="fldCallDate" alignment="1" min="-2" pref="161" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="CallDuration" alignment="1" min="-2" pref="161" max="-2" attributes="0"/>
+                          <Component id="fldCallDuration" alignment="1" min="-2" pref="161" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -139,17 +139,17 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="CallTime" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="fldCallTime" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="CallDate" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="fldCallDate" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="CallDuration" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="fldCallDuration" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -163,12 +163,12 @@
                 <Property name="text" type="java.lang.String" value="Call Time"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="CallDate">
+            <Component class="javax.swing.JTextField" name="fldCallDate">
               <Properties>
                 <Property name="text" type="java.lang.String" value="00.00.0000"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="CallTime">
+            <Component class="javax.swing.JTextField" name="fldCallTime">
               <Properties>
                 <Property name="text" type="java.lang.String" value="00:00:00"/>
               </Properties>
@@ -178,7 +178,7 @@
                 <Property name="text" type="java.lang.String" value="Call Duration"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="CallDuration">
+            <Component class="javax.swing.JTextField" name="fldCallDuration">
               <Properties>
                 <Property name="text" type="java.lang.String" value="000"/>
               </Properties>
@@ -201,14 +201,14 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="UserName" min="-2" pref="162" max="-2" attributes="0"/>
+                              <Component id="fldUserName" min="-2" pref="162" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                      <Component id="ProjectName" min="-2" pref="161" max="-2" attributes="0"/>
+                                      <Component id="fldProjectName" min="-2" pref="161" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jLabel40" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -225,14 +225,14 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ProjectName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="fldProjectName" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="UserName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="fldUserName" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="11" max="32767" attributes="0"/>
                   </Group>
@@ -240,7 +240,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="ProjectName">
+            <Component class="javax.swing.JTextField" name="fldProjectName">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel18">
               <Properties>
@@ -260,7 +260,7 @@
                 <Property name="text" type="java.lang.String" value="Username"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="UserName">
+            <Component class="javax.swing.JTextField" name="fldUserName">
             </Component>
           </SubComponents>
         </Container>
@@ -307,7 +307,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextArea" name="Comment">
+            <Component class="javax.swing.JTextArea" name="fldComment">
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
@@ -416,15 +416,13 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jScrollPane2" pref="1200" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="jScrollPane2" alignment="0" pref="1200" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="btnRefreshData" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -446,7 +444,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="jTable1">
+            <Component class="javax.swing.JTable" name="tblInformation">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="25" rowCount="0">
