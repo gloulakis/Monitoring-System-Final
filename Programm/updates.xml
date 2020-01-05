@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <updateDescriptor baseUrl="">
-  <entry targetMediaFileId="61" updatableVersionMin="" updatableVersionMax="" fileName="EvSYS_macos_1_0_0.dmg" newVersion="1.0.0" newMediaFileId="61" fileSize="1974861" md5Sum="7635b4b717ef5c21e850a68c453bec23" sha256Sum="90764a86c2e3f3b962931d6fadd3713c2da7b4a37578a506e254901ee0d8eca1" bundledJre="" archive="false" singleBundle="true">
+  <entry targetMediaFileId="61" updatableVersionMin="" updatableVersionMax="" fileName="EvSYS_macos_1_0_1.dmg" newVersion="1.0.1" newMediaFileId="61" fileSize="2113409" md5Sum="692b72965552230d29cb42a234334827" sha256Sum="6819cf1573be98f37996633cc9e4e99ca1a1c8c0bee8d85ec8b439c01ad70d54" bundledJre="" archive="false" singleBundle="true">
     <comment language="en" />
   </entry>
 </updateDescriptor>

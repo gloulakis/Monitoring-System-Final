@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.*;
 
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -128,7 +129,7 @@ public class MonitoringApp extends javax.swing.JFrame {
         btnCreateFile = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         btnNew1 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnFilePath = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblInformation = new javax.swing.JTable();
@@ -400,13 +401,13 @@ public class MonitoringApp extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("File Path");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnFilePath.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        btnFilePath.setForeground(new java.awt.Color(255, 255, 255));
+        btnFilePath.setText("File Path");
+        btnFilePath.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnFilePath.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnFilePathActionPerformed(evt);
             }
         });
 
@@ -422,7 +423,7 @@ public class MonitoringApp extends javax.swing.JFrame {
                     .addComponent(btnCreateFile))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                    .addComponent(btnFilePath, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
                     .addComponent(btnNew1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(30, 30, 30))
@@ -433,7 +434,7 @@ public class MonitoringApp extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCreateFile)
-                    .addComponent(jButton1))
+                    .addComponent(btnFilePath))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
@@ -520,7 +521,7 @@ public class MonitoringApp extends javax.swing.JFrame {
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -539,7 +540,7 @@ public class MonitoringApp extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -627,13 +628,13 @@ public class MonitoringApp extends javax.swing.JFrame {
       
     }//GEN-LAST:event_btnNew1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnFilePathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFilePathActionPerformed
         // TODO add your handling code here:
         File file = new File("Data.txt");
         String path = file.getAbsolutePath().toString();
         JOptionPane.showMessageDialog(fldComment, path);
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnFilePathActionPerformed
 
     /**
      * @param args the command line arguments
@@ -673,6 +674,7 @@ public class MonitoringApp extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCreateFile;
     private javax.swing.JButton btnEvaluationForm;
+    private javax.swing.JButton btnFilePath;
     private javax.swing.JButton btnNew1;
     private javax.swing.JButton btnNext;
     private javax.swing.JButton btnRefreshData;
@@ -682,7 +684,6 @@ public class MonitoringApp extends javax.swing.JFrame {
     private javax.swing.JTextArea fldComment;
     private javax.swing.JTextField fldProjectName;
     private javax.swing.JTextField fldUserName;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
