@@ -10,6 +10,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author georgiosloulakis
@@ -21,10 +22,8 @@ public class EvaluationForm extends javax.swing.JFrame {
      */
     public EvaluationForm() {
         initComponents();
-          //setSize(600,750);
         
-         setResizable(false);
-          
+        setResizable(true); 
     }
     
       public void FileCreation() throws IOException{
@@ -32,8 +31,7 @@ public class EvaluationForm extends javax.swing.JFrame {
         if (file.createNewFile()) {
             System.out.println("File"+ file.getName()+"was created.");
         }else System.out.println("File"+ file.getName()+"could not be created.");
-    }
-      
+    }   
       public void infoEvaluation(){
           String result0 = Result0.getText();
           String Result1 = result1.getText();
@@ -120,6 +118,28 @@ public class EvaluationForm extends javax.swing.JFrame {
         jLabel30 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
+        jColorChooser1 = new javax.swing.JColorChooser();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jEditorPane1 = new javax.swing.JEditorPane();
+        Result0 = new javax.swing.JLabel();
+        result1 = new javax.swing.JLabel();
+        Result2 = new javax.swing.JLabel();
+        Result3 = new javax.swing.JLabel();
+        Result4 = new javax.swing.JLabel();
+        Result5 = new javax.swing.JLabel();
+        Result6 = new javax.swing.JLabel();
+        Result7 = new javax.swing.JLabel();
+        Result8 = new javax.swing.JLabel();
+        Result9 = new javax.swing.JLabel();
+        Result10 = new javax.swing.JLabel();
+        Result11 = new javax.swing.JLabel();
+        Result12 = new javax.swing.JLabel();
+        Result13 = new javax.swing.JLabel();
+        Result14 = new javax.swing.JLabel();
+        Result15 = new javax.swing.JLabel();
+        Result16 = new javax.swing.JLabel();
+        Result17 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -138,16 +158,38 @@ public class EvaluationForm extends javax.swing.JFrame {
         fifteen3 = new javax.swing.JRadioButton();
         five3 = new javax.swing.JRadioButton();
         ten3 = new javax.swing.JRadioButton();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        ten16 = new javax.swing.JRadioButton();
-        ten17 = new javax.swing.JRadioButton();
-        fifteen17 = new javax.swing.JRadioButton();
-        five17 = new javax.swing.JRadioButton();
-        fifteen16 = new javax.swing.JRadioButton();
-        five16 = new javax.swing.JRadioButton();
+        jPanel5 = new javax.swing.JPanel();
+        five7 = new javax.swing.JRadioButton();
+        ten7 = new javax.swing.JRadioButton();
+        five4 = new javax.swing.JRadioButton();
+        ten4 = new javax.swing.JRadioButton();
+        fifteen4 = new javax.swing.JRadioButton();
+        jLabel38 = new javax.swing.JLabel();
+        fifteen5 = new javax.swing.JRadioButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        five5 = new javax.swing.JRadioButton();
+        ten5 = new javax.swing.JRadioButton();
+        jLabel7 = new javax.swing.JLabel();
+        fifteen6 = new javax.swing.JRadioButton();
+        jLabel8 = new javax.swing.JLabel();
+        five6 = new javax.swing.JRadioButton();
+        ten6 = new javax.swing.JRadioButton();
+        fifteen7 = new javax.swing.JRadioButton();
+        jPanel4 = new javax.swing.JPanel();
+        fifteen8 = new javax.swing.JRadioButton();
+        five8 = new javax.swing.JRadioButton();
+        ten8 = new javax.swing.JRadioButton();
+        fifteen9 = new javax.swing.JRadioButton();
+        five9 = new javax.swing.JRadioButton();
+        ten9 = new javax.swing.JRadioButton();
+        fifteen10 = new javax.swing.JRadioButton();
+        five10 = new javax.swing.JRadioButton();
+        ten10 = new javax.swing.JRadioButton();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         ten14 = new javax.swing.JRadioButton();
         five11 = new javax.swing.JRadioButton();
@@ -170,61 +212,21 @@ public class EvaluationForm extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        fifteen8 = new javax.swing.JRadioButton();
-        five8 = new javax.swing.JRadioButton();
-        ten8 = new javax.swing.JRadioButton();
-        fifteen9 = new javax.swing.JRadioButton();
-        five9 = new javax.swing.JRadioButton();
-        ten9 = new javax.swing.JRadioButton();
-        fifteen10 = new javax.swing.JRadioButton();
-        five10 = new javax.swing.JRadioButton();
-        ten10 = new javax.swing.JRadioButton();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        five7 = new javax.swing.JRadioButton();
-        ten7 = new javax.swing.JRadioButton();
-        five4 = new javax.swing.JRadioButton();
-        ten4 = new javax.swing.JRadioButton();
-        fifteen4 = new javax.swing.JRadioButton();
-        jLabel38 = new javax.swing.JLabel();
-        fifteen5 = new javax.swing.JRadioButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        five5 = new javax.swing.JRadioButton();
-        ten5 = new javax.swing.JRadioButton();
-        jLabel7 = new javax.swing.JLabel();
-        fifteen6 = new javax.swing.JRadioButton();
-        jLabel8 = new javax.swing.JLabel();
-        five6 = new javax.swing.JRadioButton();
-        ten6 = new javax.swing.JRadioButton();
-        fifteen7 = new javax.swing.JRadioButton();
-        Result0 = new javax.swing.JLabel();
-        result1 = new javax.swing.JLabel();
-        Result2 = new javax.swing.JLabel();
-        Result3 = new javax.swing.JLabel();
-        Result4 = new javax.swing.JLabel();
-        Result5 = new javax.swing.JLabel();
-        Result6 = new javax.swing.JLabel();
-        Result7 = new javax.swing.JLabel();
-        Result8 = new javax.swing.JLabel();
-        Result9 = new javax.swing.JLabel();
-        Result10 = new javax.swing.JLabel();
-        Result11 = new javax.swing.JLabel();
-        Result12 = new javax.swing.JLabel();
-        Result13 = new javax.swing.JLabel();
-        Result14 = new javax.swing.JLabel();
-        Result15 = new javax.swing.JLabel();
-        Result16 = new javax.swing.JLabel();
-        Result17 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        ten16 = new javax.swing.JRadioButton();
+        ten17 = new javax.swing.JRadioButton();
+        fifteen17 = new javax.swing.JRadioButton();
+        five17 = new javax.swing.JRadioButton();
+        fifteen16 = new javax.swing.JRadioButton();
+        five16 = new javax.swing.JRadioButton();
         jPanel6 = new javax.swing.JPanel();
         btnSaveResults = new javax.swing.JButton();
         lblComment = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtArComment = new javax.swing.JTextArea();
+        txtArComment = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
 
         jTextField3.setText("jTextField1");
 
@@ -240,20 +242,137 @@ public class EvaluationForm extends javax.swing.JFrame {
 
         jLabel45.setText("jLabel19");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jScrollPane1.setViewportView(jEditorPane1);
 
-        jLabel37.setForeground(new java.awt.Color(118, 11, 11));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(51, 0, 0));
+        setMinimumSize(new java.awt.Dimension(780, 782));
+        setUndecorated(true);
+        getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
+
+        Result0.setBackground(new java.awt.Color(51, 51, 51));
+        Result0.setForeground(new java.awt.Color(51, 51, 51));
+        Result0.setText("0");
+        getContentPane().add(Result0);
+
+        result1.setBackground(new java.awt.Color(51, 51, 51));
+        result1.setForeground(new java.awt.Color(51, 51, 51));
+        result1.setText("0");
+        getContentPane().add(result1);
+
+        Result2.setBackground(new java.awt.Color(51, 51, 51));
+        Result2.setForeground(new java.awt.Color(51, 51, 51));
+        Result2.setText("0");
+        getContentPane().add(Result2);
+
+        Result3.setBackground(new java.awt.Color(51, 51, 51));
+        Result3.setForeground(new java.awt.Color(51, 51, 51));
+        Result3.setText("0");
+        getContentPane().add(Result3);
+
+        Result4.setBackground(new java.awt.Color(51, 51, 51));
+        Result4.setForeground(new java.awt.Color(51, 51, 51));
+        Result4.setText("0");
+        getContentPane().add(Result4);
+
+        Result5.setBackground(new java.awt.Color(51, 51, 51));
+        Result5.setForeground(new java.awt.Color(51, 51, 51));
+        Result5.setText("0");
+        getContentPane().add(Result5);
+
+        Result6.setBackground(new java.awt.Color(51, 51, 51));
+        Result6.setForeground(new java.awt.Color(51, 51, 51));
+        Result6.setText("0");
+        getContentPane().add(Result6);
+
+        Result7.setBackground(new java.awt.Color(51, 51, 51));
+        Result7.setForeground(new java.awt.Color(51, 51, 51));
+        Result7.setText("0");
+        getContentPane().add(Result7);
+
+        Result8.setBackground(new java.awt.Color(51, 51, 51));
+        Result8.setForeground(new java.awt.Color(51, 51, 51));
+        Result8.setText("0");
+        getContentPane().add(Result8);
+
+        Result9.setBackground(new java.awt.Color(51, 51, 51));
+        Result9.setForeground(new java.awt.Color(51, 51, 51));
+        Result9.setText("0");
+        getContentPane().add(Result9);
+
+        Result10.setBackground(new java.awt.Color(51, 51, 51));
+        Result10.setForeground(new java.awt.Color(51, 51, 51));
+        Result10.setText("0");
+        getContentPane().add(Result10);
+
+        Result11.setBackground(new java.awt.Color(51, 51, 51));
+        Result11.setForeground(new java.awt.Color(51, 51, 51));
+        Result11.setText("0");
+        getContentPane().add(Result11);
+
+        Result12.setBackground(new java.awt.Color(51, 51, 51));
+        Result12.setForeground(new java.awt.Color(51, 51, 51));
+        Result12.setText("0");
+        getContentPane().add(Result12);
+
+        Result13.setBackground(new java.awt.Color(51, 51, 51));
+        Result13.setForeground(new java.awt.Color(51, 51, 51));
+        Result13.setText("0");
+        getContentPane().add(Result13);
+
+        Result14.setBackground(new java.awt.Color(51, 51, 51));
+        Result14.setForeground(new java.awt.Color(51, 51, 51));
+        Result14.setText("0");
+        getContentPane().add(Result14);
+
+        Result15.setBackground(new java.awt.Color(51, 51, 51));
+        Result15.setForeground(new java.awt.Color(51, 51, 51));
+        Result15.setText("0");
+        getContentPane().add(Result15);
+
+        Result16.setBackground(new java.awt.Color(51, 51, 51));
+        Result16.setForeground(new java.awt.Color(51, 51, 51));
+        Result16.setText("0");
+        getContentPane().add(Result16);
+
+        Result17.setBackground(new java.awt.Color(51, 51, 51));
+        Result17.setForeground(new java.awt.Color(51, 51, 51));
+        Result17.setText("0");
+        getContentPane().add(Result17);
+
+        jPanel7.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel7.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jPanel7MouseDragged(evt);
+            }
+        });
+        jPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanel7MousePressed(evt);
+            }
+        });
+
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel37.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(204, 204, 0));
         jLabel37.setText("Greeting");
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Took responsibility for the caller's issues and");
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Correctly greeted the caller and introduced themselves");
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Accurately identified the caller and the account");
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Effectively transfer the call to the proper department/agent if necessary");
 
+        five.setForeground(new java.awt.Color(255, 255, 255));
         five.setText("5");
         five.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -261,6 +380,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        ten.setForeground(new java.awt.Color(255, 255, 255));
         ten.setText("10");
         ten.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -268,6 +388,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        fifteen.setForeground(new java.awt.Color(255, 255, 255));
         fifteen.setText("15");
         fifteen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -275,6 +396,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        fifteen1.setForeground(new java.awt.Color(255, 255, 255));
         fifteen1.setText("15");
         fifteen1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -282,6 +404,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        five1.setForeground(new java.awt.Color(255, 255, 255));
         five1.setText("5");
         five1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -289,6 +412,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        ten1.setForeground(new java.awt.Color(255, 255, 255));
         ten1.setText("10");
         ten1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -296,6 +420,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        fifteen2.setForeground(new java.awt.Color(255, 255, 255));
         fifteen2.setText("15");
         fifteen2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -303,6 +428,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        five2.setForeground(new java.awt.Color(255, 255, 255));
         five2.setText("5");
         five2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -310,6 +436,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        ten2.setForeground(new java.awt.Color(255, 255, 255));
         ten2.setText("10");
         ten2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -317,6 +444,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        fifteen3.setForeground(new java.awt.Color(255, 255, 255));
         fifteen3.setText("15");
         fifteen3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -324,6 +452,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        five3.setForeground(new java.awt.Color(255, 255, 255));
         five3.setText("5");
         five3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -331,6 +460,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        ten3.setForeground(new java.awt.Color(255, 255, 255));
         ten3.setText("10");
         ten3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -343,49 +473,53 @@ public class EvaluationForm extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel37)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(five)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ten)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(fifteen))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(five)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ten)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fifteen))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(five1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ten1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fifteen1))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(five3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ten3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fifteen3))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(five2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ten2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fifteen2)))
+                        .addGap(18, 18, 18))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(five1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ten1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(fifteen1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(five3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ten3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(fifteen3))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(five2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ten2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(fifteen2)))
-                .addGap(18, 18, 18))
+                        .addComponent(jLabel37)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel37)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(five)
                             .addComponent(ten)
@@ -399,490 +533,28 @@ public class EvaluationForm extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(five2, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(ten2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(fifteen2, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(five3)
-                            .addComponent(ten3)
-                            .addComponent(fifteen3)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel37)
-                        .addGap(15, 15, 15)
+                            .addComponent(fifteen2, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(13, 13, 13)
                         .addComponent(jLabel2)
                         .addGap(13, 13, 13)
-                        .addComponent(jLabel3)
-                        .addGap(19, 19, 19)
-                        .addComponent(jLabel4)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel3)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(five3)
+                        .addComponent(jLabel4))
+                    .addComponent(ten3)
+                    .addComponent(fifteen3))
+                .addGap(7, 7, 7))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 14, 743, -1));
+        jPanel5.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.setForeground(new java.awt.Color(51, 51, 51));
 
-        jLabel17.setText("Offered to assist with anything else they might need");
-
-        jLabel18.setText("Thanked the customer for calling ");
-
-        jLabel41.setForeground(new java.awt.Color(118, 11, 11));
-        jLabel41.setText("Wrapping-up");
-
-        ten16.setText("10");
-        ten16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ten16ActionPerformed(evt);
-            }
-        });
-
-        ten17.setText("10");
-        ten17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ten17ActionPerformed(evt);
-            }
-        });
-
-        fifteen17.setText("15");
-        fifteen17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fifteen17ActionPerformed(evt);
-            }
-        });
-
-        five17.setText("5");
-        five17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                five17ActionPerformed(evt);
-            }
-        });
-
-        fifteen16.setText("15");
-        fifteen16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fifteen16ActionPerformed(evt);
-            }
-        });
-
-        five16.setText("5");
-        five16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                five16ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel41)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel18)
-                            .addComponent(jLabel17))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(five17)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ten17)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(fifteen17))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(five16)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ten16)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(fifteen16)))
-                        .addGap(14, 14, 14))))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel41)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel17)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel18)
-                .addGap(0, 9, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(five16)
-                            .addComponent(ten16)
-                            .addComponent(fifteen16))
-                        .addGap(28, 28, 28))
-                    .addComponent(five17)
-                    .addComponent(ten17)
-                    .addComponent(fifteen17))
-                .addContainerGap())
-        );
-
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 635, 743, -1));
-
-        ten14.setText("10");
-        ten14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ten14ActionPerformed(evt);
-            }
-        });
-
-        five11.setText("5");
-        five11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                five11ActionPerformed(evt);
-            }
-        });
-
-        ten11.setText("10");
-        ten11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ten11ActionPerformed(evt);
-            }
-        });
-
-        ten15.setText("10");
-        ten15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ten15ActionPerformed(evt);
-            }
-        });
-
-        fifteen15.setText("15");
-        fifteen15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fifteen15ActionPerformed(evt);
-            }
-        });
-
-        five15.setText("5");
-        five15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                five15ActionPerformed(evt);
-            }
-        });
-
-        fifteen11.setText("15");
-        fifteen11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fifteen11ActionPerformed(evt);
-            }
-        });
-
-        fifteen12.setText("15");
-        fifteen12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fifteen12ActionPerformed(evt);
-            }
-        });
-
-        five12.setText("5");
-        five12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                five12ActionPerformed(evt);
-            }
-        });
-
-        ten12.setText("10");
-        ten12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ten12ActionPerformed(evt);
-            }
-        });
-
-        fifteen13.setText("15");
-        fifteen13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fifteen13ActionPerformed(evt);
-            }
-        });
-
-        five13.setText("5");
-        five13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                five13ActionPerformed(evt);
-            }
-        });
-
-        ten13.setText("10");
-        ten13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ten13ActionPerformed(evt);
-            }
-        });
-
-        fifteen14.setText("15");
-        fifteen14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fifteen14ActionPerformed(evt);
-            }
-        });
-
-        five14.setText("5");
-        five14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                five14ActionPerformed(evt);
-            }
-        });
-
-        jLabel16.setText("Spoke out of line/ was rude to the customer (deduct points)");
-
-        jLabel40.setForeground(new java.awt.Color(118, 11, 11));
-        jLabel40.setText("Call Etiquette");
-
-        jLabel12.setText("The agent was attentive to the caller's comments/concerns ");
-
-        jLabel13.setText("The agent never interrupted the caller");
-
-        jLabel14.setText("There were no long pauses in the conversation");
-
-        jLabel15.setText("The agent spoke highly of all department especially ones where the problem occurred ");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel40)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel13)
-                            .addComponent(jLabel14)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel16))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(five11)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(ten11)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(fifteen11))
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(five12)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(ten12)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(fifteen12))
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(five14)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(ten14)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(fifteen14))
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(five13)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(ten13)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(fifteen13)))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(five15)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ten15)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(fifteen15)))
-                        .addGap(14, 14, 14))))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(five11)
-                            .addComponent(ten11)
-                            .addComponent(fifteen11))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(five12)
-                            .addComponent(ten12)
-                            .addComponent(fifteen12))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(five13, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(ten13, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(fifteen13, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(five14)
-                            .addComponent(ten14)
-                            .addComponent(fifteen14))
-                        .addGap(28, 28, 28))
-                    .addComponent(five15)
-                    .addComponent(ten15)
-                    .addComponent(fifteen15)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel40)
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel13)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel14)
-                        .addGap(15, 15, 15)
-                        .addComponent(jLabel15)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel16)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 445, -1, -1));
-
-        fifteen8.setText("15");
-        fifteen8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fifteen8ActionPerformed(evt);
-            }
-        });
-
-        five8.setText("5");
-        five8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                five8ActionPerformed(evt);
-            }
-        });
-
-        ten8.setText("10");
-        ten8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ten8ActionPerformed(evt);
-            }
-        });
-
-        fifteen9.setText("15");
-        fifteen9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fifteen9ActionPerformed(evt);
-            }
-        });
-
-        five9.setText("5");
-        five9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                five9ActionPerformed(evt);
-            }
-        });
-
-        ten9.setText("10");
-        ten9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ten9ActionPerformed(evt);
-            }
-        });
-
-        fifteen10.setText("15");
-        fifteen10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fifteen10ActionPerformed(evt);
-            }
-        });
-
-        five10.setText("5");
-        five10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                five10ActionPerformed(evt);
-            }
-        });
-
-        ten10.setText("10");
-        ten10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ten10ActionPerformed(evt);
-            }
-        });
-
-        jLabel10.setText("Set realistic time-frames for the problem to be taken care of ");
-
-        jLabel11.setText("Explained and determine the appropriate solution");
-
-        jLabel9.setText("Resolved the issue swiftly and immediate if possible ");
-
-        jLabel39.setForeground(new java.awt.Color(118, 11, 11));
-        jLabel39.setText("Resolution");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel39)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel11)
-                            .addComponent(jLabel10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(five8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ten8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(fifteen8))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(five10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ten10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(fifteen10))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(five9)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ten9)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(fifteen9)))
-                        .addGap(19, 19, 19))))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(five8)
-                            .addComponent(ten8)
-                            .addComponent(fifteen8))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(five9, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(ten9, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(fifteen9, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(five10)
-                            .addComponent(ten10)
-                            .addComponent(fifteen10)))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel39)
-                        .addGap(16, 16, 16)
-                        .addComponent(jLabel9)
-                        .addGap(11, 11, 11)
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel10)))
-                .addContainerGap())
-        );
-
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 324, 743, -1));
-
+        five7.setForeground(new java.awt.Color(255, 255, 255));
         five7.setText("5");
         five7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -890,6 +562,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        ten7.setForeground(new java.awt.Color(255, 255, 255));
         ten7.setText("10");
         ten7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -897,6 +570,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        five4.setForeground(new java.awt.Color(255, 255, 255));
         five4.setText("5");
         five4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -904,6 +578,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        ten4.setForeground(new java.awt.Color(255, 255, 255));
         ten4.setText("10");
         ten4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -911,6 +586,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        fifteen4.setForeground(new java.awt.Color(255, 255, 255));
         fifteen4.setText("15");
         fifteen4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -918,9 +594,11 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel38.setForeground(new java.awt.Color(118, 11, 11));
+        jLabel38.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(204, 204, 0));
         jLabel38.setText("Problem Solving");
 
+        fifteen5.setForeground(new java.awt.Color(255, 255, 255));
         fifteen5.setText("15");
         fifteen5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -928,10 +606,13 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Assured them you were there to help");
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Sought out clues, and asked only relevant questions");
 
+        five5.setForeground(new java.awt.Color(255, 255, 255));
         five5.setText("5");
         five5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -939,6 +620,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        ten5.setForeground(new java.awt.Color(255, 255, 255));
         ten5.setText("10");
         ten5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -946,8 +628,10 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Created an accurate action plan to solve the problem");
 
+        fifteen6.setForeground(new java.awt.Color(255, 255, 255));
         fifteen6.setText("15");
         fifteen6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -955,8 +639,10 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Limited the hold time ");
 
+        five6.setForeground(new java.awt.Color(255, 255, 255));
         five6.setText("5");
         five6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -964,6 +650,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        ten6.setForeground(new java.awt.Color(255, 255, 255));
         ten6.setText("10");
         ten6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -971,6 +658,7 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        fifteen7.setForeground(new java.awt.Color(255, 255, 255));
         fifteen7.setText("15");
         fifteen7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1060,62 +748,521 @@ public class EvaluationForm extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 172, 743, -1));
+        jPanel4.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        Result0.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(Result0, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 68, -1, -1));
+        fifteen8.setForeground(new java.awt.Color(255, 255, 255));
+        fifteen8.setText("15");
+        fifteen8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fifteen8ActionPerformed(evt);
+            }
+        });
 
-        result1.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(result1, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 289, -1, -1));
+        five8.setForeground(new java.awt.Color(255, 255, 255));
+        five8.setText("5");
+        five8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                five8ActionPerformed(evt);
+            }
+        });
 
-        Result2.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(Result2, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 295, -1, -1));
+        ten8.setForeground(new java.awt.Color(255, 255, 255));
+        ten8.setText("10");
+        ten8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ten8ActionPerformed(evt);
+            }
+        });
 
-        Result3.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(Result3, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 301, -1, -1));
+        fifteen9.setForeground(new java.awt.Color(255, 255, 255));
+        fifteen9.setText("15");
+        fifteen9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fifteen9ActionPerformed(evt);
+            }
+        });
 
-        Result4.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(Result4, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 522, -1, -1));
+        five9.setForeground(new java.awt.Color(255, 255, 255));
+        five9.setText("5");
+        five9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                five9ActionPerformed(evt);
+            }
+        });
 
-        Result5.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(Result5, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 528, -1, -1));
+        ten9.setForeground(new java.awt.Color(255, 255, 255));
+        ten9.setText("10");
+        ten9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ten9ActionPerformed(evt);
+            }
+        });
 
-        Result6.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(Result6, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 534, -1, -1));
+        fifteen10.setForeground(new java.awt.Color(255, 255, 255));
+        fifteen10.setText("15");
+        fifteen10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fifteen10ActionPerformed(evt);
+            }
+        });
 
-        Result7.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(Result7, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 540, -1, -1));
+        five10.setForeground(new java.awt.Color(255, 255, 255));
+        five10.setText("5");
+        five10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                five10ActionPerformed(evt);
+            }
+        });
 
-        Result8.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(Result8, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 623, -1, -1));
+        ten10.setForeground(new java.awt.Color(255, 255, 255));
+        ten10.setText("10");
+        ten10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ten10ActionPerformed(evt);
+            }
+        });
 
-        Result9.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(Result9, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 629, -1, -1));
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Set realistic time-frames for the problem to be taken care of ");
 
-        Result10.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(Result10, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 635, -1, -1));
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Explained and determine the appropriate solution");
 
-        Result11.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(Result11, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 713, -1, -1));
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Resolved the issue swiftly and immediate if possible ");
 
-        Result12.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(Result12, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 719, -1, -1));
+        jLabel39.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(204, 204, 0));
+        jLabel39.setText("Resolution");
 
-        Result13.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(Result13, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 725, -1, -1));
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel39)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel10))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(five8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ten8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fifteen8))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(five10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ten10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fifteen10))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(five9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ten9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fifteen9)))
+                        .addGap(19, 19, 19))))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(five8)
+                            .addComponent(ten8)
+                            .addComponent(fifteen8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(five9, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(ten9, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(fifteen9, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(five10)
+                            .addComponent(ten10)
+                            .addComponent(fifteen10)))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel39)
+                        .addGap(16, 16, 16)
+                        .addComponent(jLabel9)
+                        .addGap(11, 11, 11)
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel10)))
+                .addContainerGap())
+        );
 
-        Result14.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(Result14, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 731, -1, -1));
+        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        Result15.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(Result15, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 737, -1, -1));
+        ten14.setForeground(new java.awt.Color(255, 255, 255));
+        ten14.setText("10");
+        ten14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ten14ActionPerformed(evt);
+            }
+        });
 
-        Result16.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(Result16, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 947, -1, -1));
+        five11.setForeground(new java.awt.Color(255, 255, 255));
+        five11.setText("5");
+        five11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                five11ActionPerformed(evt);
+            }
+        });
 
-        Result17.setForeground(new java.awt.Color(238, 238, 238));
-        getContentPane().add(Result17, new org.netbeans.lib.awtextra.AbsoluteConstraints(799, 953, -1, -1));
+        ten11.setForeground(new java.awt.Color(255, 255, 255));
+        ten11.setText("10");
+        ten11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ten11ActionPerformed(evt);
+            }
+        });
 
+        ten15.setForeground(new java.awt.Color(255, 255, 255));
+        ten15.setText("10");
+        ten15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ten15ActionPerformed(evt);
+            }
+        });
+
+        fifteen15.setForeground(new java.awt.Color(255, 255, 255));
+        fifteen15.setText("15");
+        fifteen15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fifteen15ActionPerformed(evt);
+            }
+        });
+
+        five15.setForeground(new java.awt.Color(255, 255, 255));
+        five15.setText("5");
+        five15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                five15ActionPerformed(evt);
+            }
+        });
+
+        fifteen11.setForeground(new java.awt.Color(255, 255, 255));
+        fifteen11.setText("15");
+        fifteen11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fifteen11ActionPerformed(evt);
+            }
+        });
+
+        fifteen12.setForeground(new java.awt.Color(255, 255, 255));
+        fifteen12.setText("15");
+        fifteen12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fifteen12ActionPerformed(evt);
+            }
+        });
+
+        five12.setForeground(new java.awt.Color(255, 255, 255));
+        five12.setText("5");
+        five12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                five12ActionPerformed(evt);
+            }
+        });
+
+        ten12.setForeground(new java.awt.Color(255, 255, 255));
+        ten12.setText("10");
+        ten12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ten12ActionPerformed(evt);
+            }
+        });
+
+        fifteen13.setForeground(new java.awt.Color(255, 255, 255));
+        fifteen13.setText("15");
+        fifteen13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fifteen13ActionPerformed(evt);
+            }
+        });
+
+        five13.setForeground(new java.awt.Color(255, 255, 255));
+        five13.setText("5");
+        five13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                five13ActionPerformed(evt);
+            }
+        });
+
+        ten13.setForeground(new java.awt.Color(255, 255, 255));
+        ten13.setText("10");
+        ten13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ten13ActionPerformed(evt);
+            }
+        });
+
+        fifteen14.setForeground(new java.awt.Color(255, 255, 255));
+        fifteen14.setText("15");
+        fifteen14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fifteen14ActionPerformed(evt);
+            }
+        });
+
+        five14.setForeground(new java.awt.Color(255, 255, 255));
+        five14.setText("5");
+        five14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                five14ActionPerformed(evt);
+            }
+        });
+
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Spoke out of line/ was rude to the customer (deduct points)");
+
+        jLabel40.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(204, 204, 0));
+        jLabel40.setText("Call Etiquette");
+
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("The agent was attentive to the caller's comments/concerns ");
+
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("The agent never interrupted the caller");
+
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("There were no long pauses in the conversation");
+
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("The agent spoke highly of all department especially ones where the problem occurred ");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel40)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel16))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel3Layout.createSequentialGroup()
+                                    .addComponent(five11)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(ten11)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(fifteen11))
+                                .addGroup(jPanel3Layout.createSequentialGroup()
+                                    .addComponent(five12)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(ten12)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(fifteen12))
+                                .addGroup(jPanel3Layout.createSequentialGroup()
+                                    .addComponent(five14)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(ten14)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(fifteen14))
+                                .addGroup(jPanel3Layout.createSequentialGroup()
+                                    .addComponent(five13)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(ten13)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(fifteen13)))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(five15)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ten15)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fifteen15)))
+                        .addGap(14, 14, 14))))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(five11)
+                            .addComponent(ten11)
+                            .addComponent(fifteen11))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(five12)
+                            .addComponent(ten12)
+                            .addComponent(fifteen12))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(five13, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(ten13, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(fifteen13, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(five14)
+                            .addComponent(ten14)
+                            .addComponent(fifteen14))
+                        .addGap(28, 28, 28))
+                    .addComponent(five15)
+                    .addComponent(ten15)
+                    .addComponent(fifteen15)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel40)
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel14)
+                        .addGap(15, 15, 15)
+                        .addComponent(jLabel15)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel16)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("Offered to assist with anything else they might need");
+
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("Thanked the customer for calling ");
+
+        jLabel41.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(204, 204, 0));
+        jLabel41.setText("Wrapping-up");
+
+        ten16.setForeground(new java.awt.Color(255, 255, 255));
+        ten16.setText("10");
+        ten16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ten16ActionPerformed(evt);
+            }
+        });
+
+        ten17.setForeground(new java.awt.Color(255, 255, 255));
+        ten17.setText("10");
+        ten17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ten17ActionPerformed(evt);
+            }
+        });
+
+        fifteen17.setForeground(new java.awt.Color(255, 255, 255));
+        fifteen17.setText("15");
+        fifteen17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fifteen17ActionPerformed(evt);
+            }
+        });
+
+        five17.setForeground(new java.awt.Color(255, 255, 255));
+        five17.setText("5");
+        five17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                five17ActionPerformed(evt);
+            }
+        });
+
+        fifteen16.setForeground(new java.awt.Color(255, 255, 255));
+        fifteen16.setText("15");
+        fifteen16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fifteen16ActionPerformed(evt);
+            }
+        });
+
+        five16.setForeground(new java.awt.Color(255, 255, 255));
+        five16.setText("5");
+        five16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                five16ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel41)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel17))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(five17)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ten17)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fifteen17))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(five16)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ten16)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fifteen16)))
+                        .addGap(14, 14, 14))))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jLabel41)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel18)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(five16)
+                            .addComponent(ten16)
+                            .addComponent(fifteen16))
+                        .addGap(28, 28, 28))
+                    .addComponent(five17)
+                    .addComponent(ten17)
+                    .addComponent(fifteen17))
+                .addContainerGap())
+        );
+
+        jPanel6.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        btnSaveResults.setBackground(new java.awt.Color(255, 255, 255));
+        btnSaveResults.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        btnSaveResults.setForeground(new java.awt.Color(51, 0, 0));
         btnSaveResults.setText("Save");
         btnSaveResults.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1123,515 +1270,132 @@ public class EvaluationForm extends javax.swing.JFrame {
             }
         });
 
+        lblComment.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        lblComment.setForeground(new java.awt.Color(204, 204, 0));
         lblComment.setText("Comment");
-
-        txtArComment.setColumns(20);
-        txtArComment.setRows(5);
-        jScrollPane1.setViewportView(txtArComment);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblComment)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtArComment, javax.swing.GroupLayout.PREFERRED_SIZE, 574, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnSaveResults)
-                .addContainerGap())
+                .addGap(18, 18, 18))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnSaveResults)
-                        .addComponent(lblComment)))
-                .addGap(50, 50, 50))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblComment)
+                    .addComponent(btnSaveResults)
+                    .addComponent(txtArComment))
+                .addGap(42, 42, 42))
         );
 
-        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 728, 743, 50));
+        jLabel19.setFont(new java.awt.Font("Lucida Grande", 1, 12)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(204, 204, 0));
+        jLabel19.setText("Close");
+        jLabel19.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel19MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 756, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel19))
+                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel19))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel7);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void fiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveActionPerformed
-        // TODO add your handling code here:
-        if (five.isSelected()) {
-            ten.setSelected(false);
-            fifteen.setSelected(false);
-            Result0.setText(five.getText());
-            
+    private void jPanel7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MousePressed
+        xx = evt.getX();
+        yy = evt.getY();
+    }//GEN-LAST:event_jPanel7MousePressed
+
+    private void jPanel7MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        setLocation(x-xx,y-yy);
+    }//GEN-LAST:event_jPanel7MouseDragged
+
+    private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
+        this.dispose();
+    }//GEN-LAST:event_jLabel19MouseClicked
+
+    private void btnSaveResultsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveResultsActionPerformed
+         MonitoringApp ma = new MonitoringApp();
+        try{
+            infoEvaluation();
+            this.dispose();
+        }catch(Exception x){
+            JOptionPane.showMessageDialog(rootPane, "Error");
         }
-    }//GEN-LAST:event_fiveActionPerformed
+    }//GEN-LAST:event_btnSaveResultsActionPerformed
 
-    private void tenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenActionPerformed
+    private void five16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five16ActionPerformed
         // TODO add your handling code here:
-            if (ten.isSelected()) {
-            five.setSelected(false);
-            fifteen.setSelected(false);}
-            Result0.setText(ten.getText());
-          
-    }//GEN-LAST:event_tenActionPerformed
+        if (five16.isSelected()) {
+            ten16.setSelected(false);
+            fifteen16.setSelected(false);
+        Result16.setText(five16.getText());
+        }else
+        Result16.setText("0");
 
-    private void fifteenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteenActionPerformed
-        // TODO add your handling code here:
-           if (fifteen.isSelected()) {
-            five.setSelected(false);
-            ten.setSelected(false);}
-           Result0.setText(fifteen.getText());
-           
-    }//GEN-LAST:event_fifteenActionPerformed
+    }//GEN-LAST:event_five16ActionPerformed
 
-    private void fifteen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen1ActionPerformed
+    private void fifteen16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen16ActionPerformed
         // TODO add your handling code here:
-         if (fifteen1.isSelected()) {
-            five1.setSelected(false);
-            ten1.setSelected(false);}
-            result1.setText(fifteen1.getText());
-           
-    }//GEN-LAST:event_fifteen1ActionPerformed
-
-    private void five1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five1ActionPerformed
-        // TODO add your handling code here:
-        if (five1.isSelected()) {
-            ten1.setSelected(false);
-            fifteen1.setSelected(false);
-            result1.setText(five1.getText());
-           
-        }
-    }//GEN-LAST:event_five1ActionPerformed
-
-    private void ten1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten1ActionPerformed
-        // TODO add your handling code here:
-        if (ten1.isSelected()) {
-            five1.setSelected(false);
-            fifteen1.setSelected(false);}
-            result1.setText(ten1.getText());
-            
-    }//GEN-LAST:event_ten1ActionPerformed
-
-    private void fifteen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen2ActionPerformed
-        // TODO add your handling code here:
-         if (fifteen2.isSelected()) {
-            five2.setSelected(false);
-            ten2.setSelected(false);}
-            Result2.setText(fifteen2.getText());
-           
-    }//GEN-LAST:event_fifteen2ActionPerformed
-
-    private void five2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five2ActionPerformed
-        // TODO add your handling code here:
-        if (five2.isSelected()) {
-            ten2.setSelected(false);
-            fifteen2.setSelected(false);
-            Result2.setText(five2.getText());
-           
-        }
-    }//GEN-LAST:event_five2ActionPerformed
-
-    private void ten2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten2ActionPerformed
-        // TODO add your handling code here:
-        if (ten2.isSelected()) {
-            five2.setSelected(false);
-            fifteen2.setSelected(false);}
-            Result2.setText(ten2.getText());
-           
-    }//GEN-LAST:event_ten2ActionPerformed
-
-    private void fifteen3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen3ActionPerformed
-        // TODO add your handling code here:
-         if (fifteen3.isSelected()) {
-            five3.setSelected(false);
-            ten3.setSelected(false);}
-            Result3.setText(fifteen3.getText());
-            
-    }//GEN-LAST:event_fifteen3ActionPerformed
-
-    private void five3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five3ActionPerformed
-        // TODO add your handling code here:
-        if (five3.isSelected()) {
-            ten3.setSelected(false);
-            fifteen3.setSelected(false);
-            Result3.setText(five3.getText());
-            
-        }
-    }//GEN-LAST:event_five3ActionPerformed
-
-    private void ten3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten3ActionPerformed
-        // TODO add your handling code here:
-        if (ten3.isSelected()) {
-            five3.setSelected(false);
-            fifteen3.setSelected(false);}
-            Result3.setText(ten3.getText());
-           
-    }//GEN-LAST:event_ten3ActionPerformed
-
-    private void fifteen4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen4ActionPerformed
-        // TODO add your handling code here:
-         if (fifteen4.isSelected()) {
-            five4.setSelected(false);
-            ten4.setSelected(false);}
-            Result4.setText(fifteen4.getText());
-           
-    }//GEN-LAST:event_fifteen4ActionPerformed
-
-    private void fifteen5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen5ActionPerformed
-        // TODO add your handling code here:
-         if (fifteen5.isSelected()) {
-            five5.setSelected(false);
-            ten5.setSelected(false);}
-            Result5.setText(fifteen5.getText());
-            
-    }//GEN-LAST:event_fifteen5ActionPerformed
-
-    private void five5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five5ActionPerformed
-        // TODO add your handling code here:
-        if (five5.isSelected()) {
-            ten5.setSelected(false);
-            fifteen5.setSelected(false);
-            Result5.setText(five5.getText());
-        }
-    }//GEN-LAST:event_five5ActionPerformed
-
-    private void ten5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten5ActionPerformed
-        // TODO add your handling code here:
-        if (ten10.isSelected()) {
-            five10.setSelected(false);
-            fifteen10.setSelected(false);}
-            Result5.setText(ten10.getText());
-            
-    }//GEN-LAST:event_ten5ActionPerformed
-
-    private void fifteen6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen6ActionPerformed
-        // TODO add your handling code here:
-         if (fifteen6.isSelected()) {
-            five6.setSelected(false);
-            ten6.setSelected(false);}
-            Result6.setText(fifteen6.getText());
-            
-    }//GEN-LAST:event_fifteen6ActionPerformed
-
-    private void five6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five6ActionPerformed
-        // TODO add your handling code here:
-        if (five6.isSelected()) {
-            ten6.setSelected(false);
-            fifteen6.setSelected(false);
-            Result6.setText(five6.getText());
-           
-        }
-    }//GEN-LAST:event_five6ActionPerformed
-
-    private void ten6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten6ActionPerformed
-        // TODO add your handling code here:
-        if (ten6.isSelected()) {
-            five6.setSelected(false);
-            fifteen6.setSelected(false);}
-            Result6.setText(ten6.getText());
-           
-    }//GEN-LAST:event_ten6ActionPerformed
-
-    private void fifteen7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen7ActionPerformed
-        // TODO add your handling code here:
-         if (fifteen7.isSelected()) {
-            five7.setSelected(false);
-            ten7.setSelected(false);}
-            Result7.setText(fifteen7.getText());
-            
-    }//GEN-LAST:event_fifteen7ActionPerformed
-
-    private void five7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five7ActionPerformed
-        // TODO add your handling code here:
-        if (five7.isSelected()) {
-            ten7.setSelected(false);
-            fifteen7.setSelected(false);
-        }
-        Result7.setText(five7.getText());
-       
-    }//GEN-LAST:event_five7ActionPerformed
-
-    private void ten7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten7ActionPerformed
-        // TODO add your handling code here:
-        if (ten7.isSelected()) {
-            five7.setSelected(false);
-            fifteen7.setSelected(false);}
-          Result7.setText(ten7.getText());
-          
-    }//GEN-LAST:event_ten7ActionPerformed
-
-    private void five4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five4ActionPerformed
-        // TODO add your handling code here:
-        if (five4.isSelected()) {
-            ten4.setSelected(false);
-            fifteen7.setSelected(false);
-        }
-        Result4.setText(five4.getText());
-       
-    }//GEN-LAST:event_five4ActionPerformed
-
-    private void ten4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten4ActionPerformed
-        // TODO add your handling code here:
-        if (ten4.isSelected()) {
-            five4.setSelected(false);
-            fifteen4.setSelected(false);}
-        Result4.setText(ten4.getText());
-        
-    }//GEN-LAST:event_ten4ActionPerformed
-
-    private void fifteen8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen8ActionPerformed
-        // TODO add your handling code here:
-         if (fifteen8.isSelected()) {
-            five8.setSelected(false);
-            ten8.setSelected(false);}
-         Result8.setText(fifteen8.getText());
-        
-    }//GEN-LAST:event_fifteen8ActionPerformed
-
-    private void five8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five8ActionPerformed
-        // TODO add your handling code here:
-        if (five8.isSelected()) {
-            ten8.setSelected(false);
-            fifteen8.setSelected(false);
-        }
-         Result8.setText(five8.getText());
-         
-    }//GEN-LAST:event_five8ActionPerformed
-
-    private void ten8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten8ActionPerformed
-        // TODO add your handling code here:
-        if (ten8.isSelected()) {
-            five8.setSelected(false);
-            fifteen8.setSelected(false);}
-         Result8.setText(ten8.getText());
-        
-    }//GEN-LAST:event_ten8ActionPerformed
-
-    private void fifteen9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen9ActionPerformed
-        // TODO add your handling code here:
-         if (fifteen9.isSelected()) {
-            five9.setSelected(false);
-            ten9.setSelected(false);}
-          Result9.setText(fifteen9.getText());
-         
-    }//GEN-LAST:event_fifteen9ActionPerformed
-
-    private void five9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five9ActionPerformed
-        // TODO add your handling code here:
-        if (five9.isSelected()) {
-            ten9.setSelected(false);
-            fifteen9.setSelected(false);
-        }
-        Result9.setText(five9.getText());
-        
-    }//GEN-LAST:event_five9ActionPerformed
-
-    private void ten9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten9ActionPerformed
-        // TODO add your handling code here:
-        if (ten9.isSelected()) {
-            five9.setSelected(false);
-            fifteen9.setSelected(false);}
-        Result9.setText(ten9.getText());
-       
-    }//GEN-LAST:event_ten9ActionPerformed
-
-    private void fifteen10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen10ActionPerformed
-        // TODO add your handling code here:
-         if (fifteen10.isSelected()) {
-            five10.setSelected(false);
-            ten10.setSelected(false);}
-         Result10.setText(fifteen10.getText());
-        
-    }//GEN-LAST:event_fifteen10ActionPerformed
-
-    private void five10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five10ActionPerformed
-        // TODO add your handling code here:
-        if (five10.isSelected()) {
-            ten10.setSelected(false);
-            fifteen10.setSelected(false);
-            Result10.setText(five10.getText());
-            
-        }
-    }//GEN-LAST:event_five10ActionPerformed
-
-    private void ten10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten10ActionPerformed
-        // TODO add your handling code here:
-        if (ten10.isSelected()) {
-            five10.setSelected(false);
-            fifteen10.setSelected(false);}
-        Result10.setText(ten10.getText());
-        
-    }//GEN-LAST:event_ten10ActionPerformed
-
-    private void fifteen11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen11ActionPerformed
-        // TODO add your handling code here:
-         if (fifteen11.isSelected()) {
-            five11.setSelected(false);
-            ten11.setSelected(false);}
-         Result11.setText(fifteen11.getText());
-        
-    }//GEN-LAST:event_fifteen11ActionPerformed
-
-    private void fifteen12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen12ActionPerformed
-        // TODO add your handling code here:
-         if (fifteen12.isSelected()) {
-            five12.setSelected(false);
-            ten12.setSelected(false);}
-         Result12.setText(fifteen12.getText());
-       
-    }//GEN-LAST:event_fifteen12ActionPerformed
-
-    private void five12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five12ActionPerformed
-        // TODO add your handling code here:
-        if (five12.isSelected()) {
-            ten12.setSelected(false);
-            fifteen12.setSelected(false);
-        }
-        Result12.setText(five12.getText());
-       
-    }//GEN-LAST:event_five12ActionPerformed
-
-    private void ten12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten12ActionPerformed
-        // TODO add your handling code here:
-        if (ten12.isSelected()) {
-            five12.setSelected(false);
-            fifteen12.setSelected(false);}
-        Result12.setText(ten12.getText());
-      
-    }//GEN-LAST:event_ten12ActionPerformed
-
-    private void fifteen13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen13ActionPerformed
-        // TODO add your handling code here:
-         if (fifteen13.isSelected()) {
-            five13.setSelected(false);
-            ten13.setSelected(false);}
-         Result13.setText(fifteen13.getText());
-      
-    }//GEN-LAST:event_fifteen13ActionPerformed
-
-    private void five13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five13ActionPerformed
-        // TODO add your handling code here:
-        if (five13.isSelected()) {
-            ten13.setSelected(false);
-            fifteen13.setSelected(false);
-            Result13.setText(five13.getText());
-            
-        }
-    }//GEN-LAST:event_five13ActionPerformed
-
-    private void ten13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten13ActionPerformed
-        // TODO add your handling code here:
-        if (ten13.isSelected()) {
-            five13.setSelected(false);
-            fifteen13.setSelected(false);}
-        Result13.setText(ten13.getText());
-        
-    }//GEN-LAST:event_ten13ActionPerformed
-
-    private void fifteen14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen14ActionPerformed
-        // TODO add your handling code here:
-         if (fifteen14.isSelected()) {
-            five14.setSelected(false);
-            ten14.setSelected(false);}
-         Result14.setText(fifteen14.getText());
-         
-    }//GEN-LAST:event_fifteen14ActionPerformed
-
-    private void five14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five14ActionPerformed
-        // TODO add your handling code here:
-        if (five14.isSelected()) {
-            ten14.setSelected(false);
-            fifteen14.setSelected(false);
-        }
-         Result14.setText(five14.getText());
-        
-    }//GEN-LAST:event_five14ActionPerformed
-
-    private void ten14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten14ActionPerformed
-        // TODO add your handling code here:
-        if (ten14.isSelected()) {
-            five14.setSelected(false);
-            fifteen14.setSelected(false);}
-        Result14.setText(ten14.getText());
-       
-    }//GEN-LAST:event_ten14ActionPerformed
-
-    private void five11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five11ActionPerformed
-        // TODO add your handling code here:
-        if (five11.isSelected()) {
-            ten11.setSelected(false);
-            fifteen11.setSelected(false);
-        }
-         Result11.setText(five11.getText());
-         
-    }//GEN-LAST:event_five11ActionPerformed
-
-    private void ten11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten11ActionPerformed
-        // TODO add your handling code here:
-        if (ten11.isSelected()) {
-            five11.setSelected(false);
-            fifteen11.setSelected(false);}
-         Result11.setText(ten11.getText());
-         
-    }//GEN-LAST:event_ten11ActionPerformed
-
-    private void ten15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten15ActionPerformed
-        // TODO add your handling code here:
-        if (ten15.isSelected()) {
-            five15.setSelected(false);
-            fifteen15.setSelected(false);}
-         Result15.setText(ten15.getText());
-         
-    }//GEN-LAST:event_ten15ActionPerformed
-
-    private void fifteen15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen15ActionPerformed
-        // TODO add your handling code here:
-         if (fifteen15.isSelected()) {
-            five15.setSelected(false);
-            ten15.setSelected(false);}
-         Result15.setText(fifteen15.getText());
-        
-    }//GEN-LAST:event_fifteen15ActionPerformed
-
-    private void five15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five15ActionPerformed
-        // TODO add your handling code here:
-        if (five15.isSelected()) {
-            ten15.setSelected(false);
-            fifteen15.setSelected(false);
-        }
-         Result15.setText(five15.getText());
-         
-    }//GEN-LAST:event_five15ActionPerformed
-
-    private void ten16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten16ActionPerformed
-        // TODO add your handling code here:
-        if (ten16.isSelected()) {
+        if (fifteen16.isSelected()) {
             five16.setSelected(false);
-            fifteen16.setSelected(false);}
-         Result16.setText(ten16.getText());
-        
-    }//GEN-LAST:event_ten16ActionPerformed
-
-    private void ten17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten17ActionPerformed
-        // TODO add your handling code here:
-        if (ten17.isSelected()) {
-            five17.setSelected(false);
-            fifteen17.setSelected(false);}
-         Result17.setText(ten17.getText());
-         
-    }//GEN-LAST:event_ten17ActionPerformed
-
-    private void fifteen17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen17ActionPerformed
-        // TODO add your handling code here:
-         if (fifteen17.isSelected()) {
-            five17.setSelected(false);
-            ten17.setSelected(false);}
-         Result17.setText(fifteen17.getText());
-        
-    }//GEN-LAST:event_fifteen17ActionPerformed
+            ten16.setSelected(false);
+         Result16.setText(fifteen16.getText());
+        }
+        Result16.setText("0");
+    }//GEN-LAST:event_fifteen16ActionPerformed
 
     private void five17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five17ActionPerformed
         // TODO add your handling code here:
@@ -1639,40 +1403,529 @@ public class EvaluationForm extends javax.swing.JFrame {
             ten17.setSelected(false);
             fifteen17.setSelected(false);
             Result17.setText(five17.getText());
-           
-        }
+        }else Result17.setText("0");
     }//GEN-LAST:event_five17ActionPerformed
 
-    private void fifteen16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen16ActionPerformed
+    private void fifteen17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen17ActionPerformed
         // TODO add your handling code here:
-         if (fifteen16.isSelected()) {
+        if (fifteen17.isSelected()) {
+            five17.setSelected(false);
+            ten17.setSelected(false);
+        Result17.setText(fifteen17.getText());
+        }else
+        Result17.setText("0");
+
+    }//GEN-LAST:event_fifteen17ActionPerformed
+
+    private void ten17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten17ActionPerformed
+        // TODO add your handling code here:
+        if (ten17.isSelected()) {
+            five17.setSelected(false);
+            fifteen17.setSelected(false);
+        Result17.setText(ten17.getText());
+        }else
+        Result17.setText("0");
+
+    }//GEN-LAST:event_ten17ActionPerformed
+
+    private void ten16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten16ActionPerformed
+        // TODO add your handling code here:
+        if (ten16.isSelected()) {
             five16.setSelected(false);
-            ten16.setSelected(false);}
-          Result16.setText(fifteen16.getText());
-         
-          
-    }//GEN-LAST:event_fifteen16ActionPerformed
-
-    private void five16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five16ActionPerformed
-        // TODO add your handling code here:
-        if (five16.isSelected()) {
-            ten16.setSelected(false);
             fifteen16.setSelected(false);
-        }
-         Result16.setText(five16.getText());
-      
-    }//GEN-LAST:event_five16ActionPerformed
+        Result16.setText(ten16.getText());
+        }else
+        Result16.setText("0");
 
-    private void btnSaveResultsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveResultsActionPerformed
-            try{
-                 infoEvaluation();
-                 this.dispose();
-            }catch(Exception x){
-               JOptionPane.showMessageDialog(rootPane, "Error");
-            }
+    }//GEN-LAST:event_ten16ActionPerformed
 
-    }//GEN-LAST:event_btnSaveResultsActionPerformed
+    private void five14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five14ActionPerformed
+        // TODO add your handling code here:
+        if (five14.isSelected()) {
+            ten14.setSelected(false);
+            fifteen14.setSelected(false);
+            Result14.setText(five14.getText());
+        }else
+        Result14.setText("0");
 
+    }//GEN-LAST:event_five14ActionPerformed
+
+    private void fifteen14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen14ActionPerformed
+        // TODO add your handling code here:
+        if (fifteen14.isSelected()) {
+            five14.setSelected(false);
+            ten14.setSelected(false);
+        Result14.setText(fifteen14.getText());
+        }else
+        Result14.setText("0");
+
+    }//GEN-LAST:event_fifteen14ActionPerformed
+
+    private void ten13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten13ActionPerformed
+        // TODO add your handling code here:
+        if (ten13.isSelected()) {
+            five13.setSelected(false);
+            fifteen13.setSelected(false);
+        Result13.setText(ten13.getText());
+        }else
+        Result13.setText("0");
+    }//GEN-LAST:event_ten13ActionPerformed
+
+    private void five13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five13ActionPerformed
+        // TODO add your handling code here:
+        if (five13.isSelected()) {
+            ten13.setSelected(false);
+            fifteen13.setSelected(false);
+            Result13.setText(five13.getText());
+        }else
+            Result13.setText("0");
+    }//GEN-LAST:event_five13ActionPerformed
+
+    private void fifteen13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen13ActionPerformed
+        // TODO add your handling code here:
+        if (fifteen13.isSelected()) {
+            five13.setSelected(false);
+            ten13.setSelected(false);
+            Result13.setText(fifteen13.getText());
+        }else
+            Result13.setText("0");
+    }//GEN-LAST:event_fifteen13ActionPerformed
+
+    private void ten12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten12ActionPerformed
+        // TODO add your handling code here:
+        if (ten12.isSelected()) {
+            five12.setSelected(false);
+            fifteen12.setSelected(false);
+        Result12.setText(ten12.getText());
+        }else
+        Result12.setText("0");
+    }//GEN-LAST:event_ten12ActionPerformed
+
+    private void five12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five12ActionPerformed
+        // TODO add your handling code here:
+        if (five12.isSelected()) {
+            ten12.setSelected(false);
+            fifteen12.setSelected(false);
+            Result12.setText(five12.getText());
+        }else
+        Result12.setText("0");
+    }//GEN-LAST:event_five12ActionPerformed
+
+    private void fifteen12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen12ActionPerformed
+        // TODO add your handling code here:
+        if (fifteen12.isSelected()) {
+            five12.setSelected(false);
+            ten12.setSelected(false);
+            Result12.setText(fifteen12.getText());
+        }else
+            Result12.setText("0");
+    }//GEN-LAST:event_fifteen12ActionPerformed
+
+    private void fifteen11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen11ActionPerformed
+        // TODO add your handling code here:
+        if (fifteen11.isSelected()) {
+            five11.setSelected(false);
+            ten11.setSelected(false);
+            Result11.setText(fifteen11.getText());
+        }else
+            Result11.setText("0");
+    }//GEN-LAST:event_fifteen11ActionPerformed
+
+    private void five15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five15ActionPerformed
+        // TODO add your handling code here:
+        if (five15.isSelected()) {
+            ten15.setSelected(false);
+            fifteen15.setSelected(false);
+            Result15.setText(five15.getText());
+        }else
+            Result15.setText("0");
+    }//GEN-LAST:event_five15ActionPerformed
+
+    private void fifteen15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen15ActionPerformed
+        // TODO add your handling code here:
+        if (fifteen15.isSelected()) {
+            five15.setSelected(false);
+            ten15.setSelected(false);
+            Result15.setText(fifteen15.getText());
+        }else
+            Result15.setText("0");
+    }//GEN-LAST:event_fifteen15ActionPerformed
+
+    private void ten15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten15ActionPerformed
+        // TODO add your handling code here:
+        if (ten15.isSelected()) {
+            five15.setSelected(false);
+            fifteen15.setSelected(false);
+            Result15.setText(ten15.getText());
+        }else
+            Result15.setText("0");
+    }//GEN-LAST:event_ten15ActionPerformed
+
+    private void ten11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten11ActionPerformed
+        // TODO add your handling code here:
+        if (ten11.isSelected()) {
+            five11.setSelected(false);
+            fifteen11.setSelected(false);
+            Result11.setText(ten11.getText());
+        }else
+            Result11.setText("0");
+    }//GEN-LAST:event_ten11ActionPerformed
+
+    private void five11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five11ActionPerformed
+        // TODO add your handling code here:
+        if (five11.isSelected()) {
+            ten11.setSelected(false);
+            fifteen11.setSelected(false);
+            Result11.setText(five11.getText());
+        }else
+            Result11.setText("0");
+    }//GEN-LAST:event_five11ActionPerformed
+
+    private void ten14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten14ActionPerformed
+        // TODO add your handling code here:
+        if (ten14.isSelected()) {
+            five14.setSelected(false);
+            fifteen14.setSelected(false);
+            Result14.setText(ten14.getText());
+        }else
+            Result14.setText("0");
+    }//GEN-LAST:event_ten14ActionPerformed
+
+    private void ten10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten10ActionPerformed
+        // TODO add your handling code here:
+        if (ten10.isSelected()) {
+            five10.setSelected(false);
+            fifteen10.setSelected(false);
+            Result10.setText(ten10.getText());
+        }else
+            Result10.setText("0");
+    }//GEN-LAST:event_ten10ActionPerformed
+
+    private void five10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five10ActionPerformed
+        // TODO add your handling code here:
+        if (five10.isSelected()) {
+            ten10.setSelected(false);
+            fifteen10.setSelected(false);
+            Result10.setText(five10.getText());
+        }else
+            Result10.setText("0");
+    }//GEN-LAST:event_five10ActionPerformed
+
+    private void fifteen10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen10ActionPerformed
+        // TODO add your handling code here:
+        if (fifteen10.isSelected()) {
+            five10.setSelected(false);
+            ten10.setSelected(false);
+            Result10.setText(fifteen10.getText());
+        }else
+            Result10.setText("0");
+    }//GEN-LAST:event_fifteen10ActionPerformed
+
+    private void ten9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten9ActionPerformed
+        // TODO add your handling code here:
+        if (ten9.isSelected()) {
+            five9.setSelected(false);
+            fifteen9.setSelected(false);
+            Result9.setText(ten9.getText());
+        }else
+            Result9.setText("0");
+    }//GEN-LAST:event_ten9ActionPerformed
+
+    private void five9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five9ActionPerformed
+        // TODO add your handling code here:
+        if (five9.isSelected()) {
+            ten9.setSelected(false);
+            fifteen9.setSelected(false);
+            Result9.setText(five9.getText());
+        }else
+            Result9.setText("0");
+    }//GEN-LAST:event_five9ActionPerformed
+
+    private void fifteen9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen9ActionPerformed
+        // TODO add your handling code here:
+        if (fifteen9.isSelected()) {
+            five9.setSelected(false);
+            ten9.setSelected(false);
+            Result9.setText(fifteen9.getText());
+        }else
+            Result9.setText("0");
+    }//GEN-LAST:event_fifteen9ActionPerformed
+
+    private void ten8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten8ActionPerformed
+        // TODO add your handling code here:
+        if (ten8.isSelected()) {
+            five8.setSelected(false);
+            fifteen8.setSelected(false);
+            Result8.setText(ten8.getText());
+        }else
+            Result8.setText("0");
+    }//GEN-LAST:event_ten8ActionPerformed
+
+    private void five8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five8ActionPerformed
+        // TODO add your handling code here:
+        if (five8.isSelected()) {
+            ten8.setSelected(false);
+            fifteen8.setSelected(false);
+            Result8.setText(five8.getText());
+        }else
+            Result8.setText("0");
+    }//GEN-LAST:event_five8ActionPerformed
+
+    private void fifteen8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen8ActionPerformed
+        // TODO add your handling code here:
+        if (fifteen8.isSelected()) {
+            five8.setSelected(false);
+            ten8.setSelected(false);
+            Result8.setText(fifteen8.getText());
+        }else
+            Result8.setText("0");
+    }//GEN-LAST:event_fifteen8ActionPerformed
+
+    private void fifteen7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen7ActionPerformed
+        // TODO add your handling code here:
+        if (fifteen7.isSelected()) {
+            five7.setSelected(false);
+            ten7.setSelected(false);
+            Result7.setText(fifteen7.getText());
+        }else
+            Result7.setText("0");
+    }//GEN-LAST:event_fifteen7ActionPerformed
+
+    private void ten6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten6ActionPerformed
+        // TODO add your handling code here:
+        if (ten6.isSelected()) {
+            five6.setSelected(false);
+            fifteen6.setSelected(false);
+            Result6.setText(ten6.getText());
+        }else
+            Result6.setText("0");
+    }//GEN-LAST:event_ten6ActionPerformed
+
+    private void five6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five6ActionPerformed
+        // TODO add your handling code here:
+        if (five6.isSelected()) {
+            ten6.setSelected(false);
+            fifteen6.setSelected(false);
+            Result6.setText(five6.getText());
+        }else
+            Result6.setText("0");
+    }//GEN-LAST:event_five6ActionPerformed
+
+    private void fifteen6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen6ActionPerformed
+        // TODO add your handling code here:
+        if (fifteen6.isSelected()) {
+            five6.setSelected(false);
+            ten6.setSelected(false);
+            Result6.setText(fifteen6.getText());
+        }else
+            Result6.setText("0");
+    }//GEN-LAST:event_fifteen6ActionPerformed
+
+    private void ten5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten5ActionPerformed
+        // TODO add your handling code here:
+        if (ten10.isSelected()) {
+            five10.setSelected(false);
+            fifteen10.setSelected(false);
+            Result5.setText(ten10.getText());
+        }else
+            Result5.setText("0");
+    }//GEN-LAST:event_ten5ActionPerformed
+
+    private void five5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five5ActionPerformed
+        // TODO add your handling code here:
+        if (five5.isSelected()) {
+            ten5.setSelected(false);
+            fifteen5.setSelected(false);
+            Result5.setText(five5.getText());
+        }else
+            Result5.setText("0");
+    }//GEN-LAST:event_five5ActionPerformed
+
+    private void fifteen5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen5ActionPerformed
+        // TODO add your handling code here:
+        if (fifteen5.isSelected()) {
+            five5.setSelected(false);
+            ten5.setSelected(false);
+            Result5.setText(fifteen5.getText());
+        }else
+            Result5.setText("0");
+    }//GEN-LAST:event_fifteen5ActionPerformed
+
+    private void fifteen4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen4ActionPerformed
+        // TODO add your handling code here:
+        if (fifteen4.isSelected()) {
+            five4.setSelected(false);
+            ten4.setSelected(false);
+            Result4.setText(fifteen4.getText());
+        }else
+            Result4.setText("0");
+    }//GEN-LAST:event_fifteen4ActionPerformed
+
+    private void ten4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten4ActionPerformed
+        // TODO add your handling code here:
+        if (ten4.isSelected()) {
+            five4.setSelected(false);
+            fifteen4.setSelected(false);
+            Result4.setText(ten4.getText());
+        }else
+            Result4.setText("0");
+    }//GEN-LAST:event_ten4ActionPerformed
+
+    private void five4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five4ActionPerformed
+        // TODO add your handling code here:
+        if (five4.isSelected()) {
+            ten4.setSelected(false);
+            fifteen7.setSelected(false);
+            Result4.setText(five4.getText());
+        }else
+            Result4.setText("0");
+    }//GEN-LAST:event_five4ActionPerformed
+
+    private void ten7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten7ActionPerformed
+        // TODO add your handling code here:
+        if (ten7.isSelected()) {
+            five7.setSelected(false);
+            fifteen7.setSelected(false);
+            Result7.setText(ten7.getText());
+        }else
+            Result7.setText("0");
+    }//GEN-LAST:event_ten7ActionPerformed
+
+    private void five7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five7ActionPerformed
+        // TODO add your handling code here:
+        if (five7.isSelected()) {
+            ten7.setSelected(false);
+            fifteen7.setSelected(false);
+            Result7.setText(five7.getText());
+        }else
+            Result7.setText("0");
+    }//GEN-LAST:event_five7ActionPerformed
+
+    private void ten3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten3ActionPerformed
+        // TODO add your handling code here:
+        if (ten3.isSelected()) {
+            five3.setSelected(false);
+            fifteen3.setSelected(false);
+            Result3.setText(ten3.getText());
+        }else
+        Result3.setText("0");
+    }//GEN-LAST:event_ten3ActionPerformed
+
+    private void five3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five3ActionPerformed
+        // TODO add your handling code here:
+        if (five3.isSelected()) {
+            ten3.setSelected(false);
+            fifteen3.setSelected(false);
+            Result3.setText(five3.getText());
+        }else
+            Result3.setText("0");
+    }//GEN-LAST:event_five3ActionPerformed
+
+    private void fifteen3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen3ActionPerformed
+        // TODO add your handling code here:
+        if (fifteen3.isSelected()) {
+            five3.setSelected(false);
+            ten3.setSelected(false);
+            Result3.setText(fifteen3.getText());
+        }else
+            Result3.setText("0");
+    }//GEN-LAST:event_fifteen3ActionPerformed
+
+    private void ten2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten2ActionPerformed
+        // TODO add your handling code here:
+        if (ten2.isSelected()) {
+            five2.setSelected(false);
+            fifteen2.setSelected(false);
+            Result2.setText(ten2.getText());
+        }else
+            Result2.setText("0");
+    }//GEN-LAST:event_ten2ActionPerformed
+
+    private void five2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five2ActionPerformed
+        // TODO add your handling code here:
+        if (five2.isSelected()) {
+            ten2.setSelected(false);
+            fifteen2.setSelected(false);
+            Result2.setText(five2.getText());
+        }else
+            Result2.setText("0");
+    }//GEN-LAST:event_five2ActionPerformed
+
+    private void fifteen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen2ActionPerformed
+        // TODO add your handling code here:
+        if (fifteen2.isSelected()) {
+            five2.setSelected(false);
+            ten2.setSelected(false);
+            Result2.setText(fifteen2.getText());
+        }else
+        Result2.setText("0");
+
+    }//GEN-LAST:event_fifteen2ActionPerformed
+
+    private void ten1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ten1ActionPerformed
+        // TODO add your handling code here:
+        if (ten1.isSelected()) {
+            five1.setSelected(false);
+            fifteen1.setSelected(false);
+        result1.setText(ten1.getText());
+        }else
+        result1.setText("0");
+
+    }//GEN-LAST:event_ten1ActionPerformed
+
+    private void five1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_five1ActionPerformed
+        // TODO add your handling code here:
+        if (five1.isSelected()) {
+            ten1.setSelected(false);
+            fifteen1.setSelected(false);
+            result1.setText(five1.getText());
+        }else
+            result1.setText("0");
+    }//GEN-LAST:event_five1ActionPerformed
+
+    private void fifteen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteen1ActionPerformed
+        // TODO add your handling code here:
+        if (fifteen1.isSelected()) {
+            five1.setSelected(false);
+            ten1.setSelected(false);
+        result1.setText(fifteen1.getText());
+        }else
+        result1.setText("0");
+
+    }//GEN-LAST:event_fifteen1ActionPerformed
+
+    private void fifteenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fifteenActionPerformed
+        // TODO add your handling code here:
+        if (fifteen.isSelected()) {
+            five.setSelected(false);
+            ten.setSelected(false);
+        Result0.setText(fifteen.getText());
+        }else
+        Result0.setText("0");
+
+    }//GEN-LAST:event_fifteenActionPerformed
+
+    private void tenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tenActionPerformed
+        // TODO add your handling code here:
+        if (ten.isSelected()) {
+            five.setSelected(false);
+            fifteen.setSelected(false);
+            Result0.setText(ten.getText());
+        }else
+        Result0.setText("0");
+
+    }//GEN-LAST:event_tenActionPerformed
+
+    private void fiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveActionPerformed
+        // TODO add your handling code here:
+        if (five.isSelected()) {
+            ten.setSelected(false);
+            fifteen.setSelected(false);
+            Result0.setText(five.getText());
+        }else
+            Result0.setText("0");
+    }//GEN-LAST:event_fiveActionPerformed
+    static int xx,yy;
     /**
      * @param args the command line arguments
      */
@@ -1764,6 +2017,8 @@ public class EvaluationForm extends javax.swing.JFrame {
     private javax.swing.JRadioButton five7;
     private javax.swing.JRadioButton five8;
     private javax.swing.JRadioButton five9;
+    private javax.swing.JColorChooser jColorChooser1;
+    private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1774,6 +2029,7 @@ public class EvaluationForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
@@ -1799,6 +2055,7 @@ public class EvaluationForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JLabel lblComment;
@@ -1821,7 +2078,7 @@ public class EvaluationForm extends javax.swing.JFrame {
     private javax.swing.JRadioButton ten7;
     private javax.swing.JRadioButton ten8;
     private javax.swing.JRadioButton ten9;
-    private javax.swing.JTextArea txtArComment;
+    private javax.swing.JTextField txtArComment;
     // End of variables declaration//GEN-END:variables
    
 }

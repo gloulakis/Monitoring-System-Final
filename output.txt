@@ -1,4 +1,0 @@
-# List of generated media files. The columns are tab-separated:
-# id | media file type | display name | media file path
-156	windows	Windows	/Users/georgiosloulakis/Desktop/GitHub/Monitoring-System-Final/MSE_windows-x64_1_0_0.exe
-160	macos	macOS Folder	/Users/georgiosloulakis/Desktop/GitHub/Monitoring-System-Final/MSE_macos_1_0_0.dmg

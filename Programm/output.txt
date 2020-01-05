@@ -1,0 +1,3 @@
+# List of generated media files. The columns are tab-separated:
+# id | media file type | display name | media file path
+61	macos	macOS Single Bundle	/Users/georgiosloulakis/Desktop/GitHub/Monitoring-System-Final/Programm/EvSYS_macos_1_0_0.dmg
