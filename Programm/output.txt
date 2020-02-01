@@ -1,3 +1,5 @@
 # List of generated media files. The columns are tab-separated:
 # id | media file type | display name | media file path
+252	windows	Windows Archive 32	/Users/georgiosloulakis/Desktop/GitHub/Monitoring-System-Final/Programm/EvSYS_windows-x32_1_0_1.zip
+251	windows	Windows Archive	/Users/georgiosloulakis/Desktop/GitHub/Monitoring-System-Final/Programm/EvSYS_windows-x64_1_0_1.zip
 61	macos	macOS Single Bundle	/Users/georgiosloulakis/Desktop/GitHub/Monitoring-System-Final/Programm/EvSYS_macos_1_0_1.dmg

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <updateDescriptor baseUrl="">
-  <entry targetMediaFileId="61" updatableVersionMin="" updatableVersionMax="" fileName="EvSYS_macos_1_0_1.dmg" newVersion="1.0.1" newMediaFileId="61" fileSize="2070863" md5Sum="4930efb3976b1c350c101085bc3b3c02" sha256Sum="ae36160509141c0394b8b7b739750f981a3eb4aa60109d649b076b8691028d3b" bundledJre="" archive="false" singleBundle="true">
+  <entry targetMediaFileId="61" updatableVersionMin="" updatableVersionMax="" fileName="EvSYS_macos_1_0_1.dmg" newVersion="1.0.1" newMediaFileId="61" fileSize="2070845" md5Sum="d9a6848b284c5e0d2ce379cade19d133" sha256Sum="1fe4e70373774d289651f461599ba56da70a3cc50018dafac19728642532c12a" bundledJre="" archive="false" singleBundle="true">
+    <comment language="en" />
+  </entry>
+  <entry targetMediaFileId="251" updatableVersionMin="" updatableVersionMax="" fileName="EvSYS_windows-x64_1_0_1.zip" newVersion="1.0.1" newMediaFileId="251" fileSize="405" md5Sum="7b0bb4b5ae4238044a1036a9af105632" sha256Sum="d240950d96126ca4d1dddfa813ad167eb8c7768d37c83e946ed251be0fc35648" bundledJre="" archive="true" singleBundle="false">
+    <comment language="en" />
+  </entry>
+  <entry targetMediaFileId="252" updatableVersionMin="" updatableVersionMax="" fileName="EvSYS_windows-x32_1_0_1.zip" newVersion="1.0.1" newMediaFileId="252" fileSize="405" md5Sum="7b0bb4b5ae4238044a1036a9af105632" sha256Sum="d240950d96126ca4d1dddfa813ad167eb8c7768d37c83e946ed251be0fc35648" bundledJre="" archive="true" singleBundle="false">
     <comment language="en" />
   </entry>
 </updateDescriptor>
